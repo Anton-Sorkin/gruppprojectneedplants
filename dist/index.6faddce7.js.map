@@ -1,0 +1,1 @@
+{"mappings":"AAAA,MAAM,CAAC,MAAM,GAAG,QAAQ,GAAI,CAAC;AAC5B,EAA2B,AAA3B,uBAA2B,AAA3B,EAA2B,CAC5B,CAAC","sources":["src/typescript/main.ts"],"sourcesContent":["window.onload = function () {\r\n\t/*Write normal typescript*/\r\n};\r\n"],"names":[],"version":3,"file":"index.6faddce7.js.map","sourceRoot":"/__parcel_source_root/"}

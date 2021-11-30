@@ -1,0 +1,12 @@
+@import "extends";
+
+@mixin tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+@mixin laptop {
+	@media (min-width: 992px) {
+		@content;
+	}
+}

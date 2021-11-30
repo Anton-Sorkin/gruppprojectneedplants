@@ -1,0 +1,13 @@
+@import "./components/mixins";
+/*how to use mixins@include tablet {}*/
+/*how to use extends@extend .class-name;*/
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 14pt;
+	/*all styling here*/
+}
