@@ -12,4 +12,14 @@
 body {
 	font-size: 14pt;
 	/*all styling here*/
+
+	#product-image{
+
+		height: 600px;
+		width: 100%;
+
+		background-image: url(../../assets/pexels-juan-pablo-serrano-arenas-1084188.jpg);
+		background-position: center;
+		background-size: cover;
+	}
 }

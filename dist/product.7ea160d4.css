@@ -1,0 +1,19 @@
+/*how to use mixins@include tablet {}*/
+/*how to use extends@extend .class-name;*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14pt;
+  /*all styling here*/
+}
+body #product-image {
+  height: 600px;
+  width: 100%;
+  background-image: url(pexels-juan-pablo-serrano-arenas-1084188.6ab90843.jpg);
+  background-position: center;
+  background-size: cover;
+}
+/*# sourceMappingURL=product.7ea160d4.css.map */
