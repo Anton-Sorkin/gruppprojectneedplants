@@ -101,4 +101,17 @@ body {
 
 		
 	}
+
+	#product-title-wrapper{
+
+		padding: 30px 30px;
+		margin-top: 30px;
+
+		#product-title-div{
+			display: flex;
+			flex-direction: column;
+
+			gap: 30px;
+		}
+	}
 }

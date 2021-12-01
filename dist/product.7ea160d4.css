@@ -67,4 +67,13 @@ body #product-tags #product-tag-2 .fa-cloud-showers-heavy {
   padding: 15px;
   border-radius: 7px;
 }
+body #product-title-wrapper {
+  padding: 30px 30px;
+  margin-top: 30px;
+}
+body #product-title-wrapper #product-title-div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 /*# sourceMappingURL=product.7ea160d4.css.map */
