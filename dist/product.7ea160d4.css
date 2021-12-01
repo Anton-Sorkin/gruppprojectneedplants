@@ -69,13 +69,16 @@ body #product-tags #product-tag-2 .fa-cloud-showers-heavy {
   border-radius: 7px;
 }
 body #product-title-wrapper {
-  padding: 30px 60px;
+  padding: 30px 40px;
   margin-top: 30px;
 }
 body #product-title-wrapper #product-title-div {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  background-color: #fff1e6;
+  border-radius: 15px;
+  padding: 30px;
 }
 body #product-price-wrapper {
   margin-top: 30px;
@@ -90,8 +93,7 @@ body #product-price-wrapper #product-price {
   grid-row-start: 1;
   grid-row-end: 2;
   display: flex;
-  justify-content: flex-end;
-  padding-right: 70px;
+  justify-content: center;
 }
 body #product-price-wrapper #product-price .fa-minus-circle {
   padding: 5px;
@@ -105,9 +107,8 @@ body #product-price-wrapper #product-cost {
   grid-row-start: 2;
   grid-row-end: 3;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  padding-right: 90px;
 }
 body #product-price-wrapper #product-button {
   grid-column-start: 2;
@@ -115,9 +116,8 @@ body #product-price-wrapper #product-button {
   grid-row-start: 3;
   grid-row-end: 4;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   padding-top: 10px;
-  padding-right: 65px;
 }
 body #product-price-wrapper #product-button button {
   background-color: yellow;
