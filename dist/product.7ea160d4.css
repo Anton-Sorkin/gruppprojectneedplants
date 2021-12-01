@@ -5,52 +5,52 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
 body {
   font-size: 14pt;
   /*all styling here*/
 }
 body #product-image {
-  height: 600px;
+  height: 700px;
   width: 100%;
-  background-image: url(pexels-juan-pablo-serrano-arenas-1084188.6ab90843.jpg);
-  background-position: center;
-  background-size: cover;
-  padding-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 200px;
+  position: relative;
 }
-body #product-image #product-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
+body #product-image .image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 body #product-image #product-header #product-house-icon {
   background-color: #FFE040;
   padding: 15px;
   border-radius: 7px;
+  position: absolute;
+  top: 40px;
+  left: 30px;
 }
 body #product-image #product-header .fa-house-user {
   color: black;
 }
 body #product-image #product-header .fa-shopping-cart {
   color: black;
-  margin-left: auto;
+  position: absolute;
+  top: 55px;
+  right: 30px;
 }
 body #product-tags {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
   gap: 30px;
+  position: absolute;
+  bottom: 200px;
+  left: 30px;
 }
 body #product-tags #product-tag-1 {
   display: flex;
   flex-direction: column;
 }
 body #product-tags #product-tag-1 .fa-sun {
-  background-color: #eeeeee;
+  background-color: white;
   width: 60px;
   padding: 15px;
   border-radius: 7px;
@@ -62,7 +62,7 @@ body #product-tags #product-tag-2 {
   align-items: center;
 }
 body #product-tags #product-tag-2 .fa-cloud-showers-heavy {
-  background-color: #eeeeee;
+  background-color: white;
   width: 60px;
   padding: 15px;
   border-radius: 7px;
