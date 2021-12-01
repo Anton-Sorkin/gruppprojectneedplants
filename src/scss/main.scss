@@ -1,4 +1,6 @@
 @import "./components/mixins";
+@import "./components/extends";
+@import "./components/variables";
 /*how to use mixins@include tablet {}*/
 /*how to use extends@extend .class-name;*/
 * {
