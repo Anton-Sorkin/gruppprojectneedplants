@@ -28,6 +28,7 @@ body #product-image #product-header #product-house-icon {
   position: absolute;
   top: 40px;
   left: 30px;
+  box-shadow: 3px 3px 3px #80808096;
 }
 body #product-image #product-header .fa-house-user {
   color: black;
@@ -85,7 +86,7 @@ body #product-price-wrapper {
   margin-bottom: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 50px 50px;
+  grid-template-rows: 70px 70px 70px;
 }
 body #product-price-wrapper #product-price {
   grid-column-start: 2;
@@ -94,12 +95,22 @@ body #product-price-wrapper #product-price {
   grid-row-end: 2;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-body #product-price-wrapper #product-price .fa-minus-circle {
-  padding: 5px;
+body #product-price-wrapper #product-price #product-plus-button {
+  padding: 3px 7px;
+  border-radius: 5px;
+  background-color: #f0eeee;
+  box-shadow: 1px 1px 1px #80808096;
 }
-body #product-price-wrapper #product-price .fa-plus-circle {
-  padding: 5px;
+body #product-price-wrapper #product-price #product-minus-button {
+  padding: 3px 7px;
+  border-radius: 5px;
+  background-color: #f0eeee;
+  box-shadow: 1px 1px 1px #80808096;
+}
+body #product-price-wrapper #product-price #product-quantity {
+  padding: 8px;
 }
 body #product-price-wrapper #product-cost {
   grid-column-start: 2;
@@ -117,13 +128,14 @@ body #product-price-wrapper #product-button {
   grid-row-end: 4;
   display: flex;
   justify-content: center;
-  padding-top: 10px;
+  align-items: center;
 }
 body #product-price-wrapper #product-button button {
   background-color: yellow;
   color: black;
   padding: 10px 15px;
   border-radius: 5px;
+  box-shadow: 2px 2px 2px #80808096;
 }
 body #product-price-wrapper #product-rating {
   grid-row-start: 2;

@@ -41,6 +41,8 @@ body {
 			position: absolute;
 			top: 40px;
 			left: 30px;
+
+			box-shadow: 3px 3px 3px #80808096;
 		}
 		.fa-house-user{
 			color: black;
@@ -130,7 +132,7 @@ body {
 		display: grid;
 
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows:50px 50px 50px ;
+		grid-template-rows:70px 70px 70px ;
 	#product-price{
 
 		grid-column-start: 2;
@@ -142,12 +144,25 @@ body {
 		display: flex;
 		justify-content: center;
 
-		.fa-minus-circle{
-			padding: 5px;
-			
+		align-items: center;
+
+		#product-plus-button{
+			padding: 3px 7px;
+			border-radius: 5px;
+
+			background-color: rgb(240, 238, 238);
+			box-shadow: 1px 1px 1px #80808096;
 		}
-		.fa-plus-circle{
-			padding: 5px;
+		#product-minus-button{
+			padding: 3px 7px;
+			border-radius: 5px;
+
+			background-color: rgb(240, 238, 238);
+
+			box-shadow: 1px 1px 1px #80808096;
+		}
+		#product-quantity{
+			padding: 8px;
 		}
 
 		
@@ -174,8 +189,8 @@ body {
 
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		
-		padding-top: 10px;
 		
 
 		button{
@@ -185,6 +200,8 @@ body {
 			padding: 10px 15px;
 
 			border-radius: 5px;
+
+			box-shadow: 2px 2px 2px #80808096;
 		}
 	}
 
