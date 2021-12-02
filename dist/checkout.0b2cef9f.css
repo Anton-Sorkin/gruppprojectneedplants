@@ -10,4 +10,15 @@ body {
   font-size: 14pt;
   /*all styling here*/
 }
+body button#checkout-home {
+  background-color: yellow;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  left: 120px;
+}
+body button#checkout-home a {
+  color: black;
+}
 /*# sourceMappingURL=checkout.0b2cef9f.css.map */

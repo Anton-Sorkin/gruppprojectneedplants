@@ -12,4 +12,20 @@
 body {
 	font-size: 14pt;
 	/*all styling here*/
+
+	button#checkout-home {
+		background-color: yellow;
+
+		padding: 10px;
+
+		border-radius: 5px;
+		
+		position: absolute;
+		top: 50px;
+		left: 120px;
+		a{
+			color: black;
+
+		}
+	}
 }
