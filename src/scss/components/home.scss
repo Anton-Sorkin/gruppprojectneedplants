@@ -91,34 +91,37 @@ body {
         line-height: 35px;
         font-family: $font;
       }
-      #home-products-wrapper {
+      #home-all-products-wrapper {
         width: 80%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 15px;
-        //styling som borde funka till produkt divvarna
-        //döp om efter rätt
-
-        .home-image-wrapper {
-          position: relative;
+        .home-single-product-wrapper {
+          display: flex;
+          flex-direction: column;
           width: 47%;
-          height: 200px;
-          background-color: red;
-          border-radius: 15px;
-          .home-product-cart-link {
-            height: 32px;
-            width: 28px;
-            background-color: $yellow;
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 5px;
+          .home-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background-color: red;
+            border-radius: 15px;
+            .home-product-cart-link {
+              height: 32px;
+              width: 28px;
+              background-color: $yellow;
+              position: absolute;
+              bottom: 10px;
+              right: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 5px;
+            }
           }
         }
+        //styling som borde funka till produkt divvarna
       }
       a {
         position: fixed;
