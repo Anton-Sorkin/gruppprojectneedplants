@@ -22,12 +22,14 @@ body {
 		.start-header {
 			h1 {
 				display: inline;
+				font-size: 2.1rem;
 			}
 			#start-yellow {
-				background-color: yellow;
+				background-color: rgba(255, 224, 64, 1);
 				width: 120px;
 				height: 40px;
 				display: inline;
+				border-radius: 5px;
 			}
 			.start-block {
 				width: 180px;
@@ -39,31 +41,39 @@ body {
 		}
 		.start-section {
 			position: relative;
-			top: 70%;
-			width: 180px;
+			top: 70vh;
+			width: 100%;
 			height: 100px;
-			padding-top: 30px;
 			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			background: linear-gradient(
-				274.49deg,
-				rgba(255, 255, 255, 0.5) -110.02%,
-				rgba(255, 255, 255, 0) 218.91%
-			);
-			filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
-			border-radius: 15px 0px 0px 0px;
-			#start-link {
-				width: 60%;
-				height: 60%;
-				border: none;
-				background-color: yellow;
-				align-self: center;
-			}
-			.start-block {
+			flex-direction: row-reverse;
+			.start-item {
 				width: 180px;
-				height: 5px;
-				background-color: $black;
+				height: 100px;
+				padding-top: 30px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				background: linear-gradient(
+					274.49deg,
+					rgba(255, 255, 255, 0.5) -110.02%,
+					rgba(255, 255, 255, 0) 218.91%
+				);
+				filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+				border-radius: 15px 0px 0px 0px;
+				#start-link {
+					width: 60%;
+					height: 60%;
+					border: none;
+					background-color: rgba(255, 224, 64, 1);
+					align-self: center;
+					border-radius: 5px;
+					font-weight: bold;
+				}
+				.start-block {
+					width: 180px;
+					height: 5px;
+					background-color: $black;
+				}
 			}
 		}
 	}
