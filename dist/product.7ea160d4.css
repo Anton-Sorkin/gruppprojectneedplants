@@ -98,16 +98,18 @@ body #product-price-wrapper #product-price {
   align-items: center;
 }
 body #product-price-wrapper #product-price #product-plus-button {
-  padding: 3px 7px;
+  padding: 5px 9px;
   border-radius: 5px;
-  background-color: #f0eeee;
-  box-shadow: 1px 1px 1px #80808096;
+  background-color: #F7F7F7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
 }
 body #product-price-wrapper #product-price #product-minus-button {
-  padding: 3px 7px;
+  padding: 5px 9px;
+  background-color: #F7F7F7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  background-color: #f0eeee;
-  box-shadow: 1px 1px 1px #80808096;
+  border: none;
 }
 body #product-price-wrapper #product-price #product-quantity {
   padding: 8px;
@@ -131,11 +133,12 @@ body #product-price-wrapper #product-button {
   align-items: center;
 }
 body #product-price-wrapper #product-button button {
-  background-color: yellow;
+  background-color: #FFE040;
   color: black;
   padding: 10px 15px;
   border-radius: 5px;
   box-shadow: 2px 2px 2px #80808096;
+  border: none;
 }
 body #product-price-wrapper #product-rating {
   grid-row-start: 2;

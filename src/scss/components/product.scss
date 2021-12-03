@@ -147,19 +147,22 @@ body {
 		align-items: center;
 
 		#product-plus-button{
-			padding: 3px 7px;
+			padding: 5px 9px;
 			border-radius: 5px;
 
-			background-color: rgb(240, 238, 238);
-			box-shadow: 1px 1px 1px #80808096;
+			background-color: #F7F7F7;
+			box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+			
+			border: none;
 		}
 		#product-minus-button{
-			padding: 3px 7px;
+			padding: 5px 9px;
+			
+			background-color: #F7F7F7;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 			border-radius: 5px;
 
-			background-color: rgb(240, 238, 238);
-
-			box-shadow: 1px 1px 1px #80808096;
+			border: none;
 		}
 		#product-quantity{
 			padding: 8px;
@@ -194,7 +197,7 @@ body {
 		
 
 		button{
-			background-color: yellow;
+			background-color: #FFE040;
 			color: black;
 
 			padding: 10px 15px;
@@ -202,6 +205,7 @@ body {
 			border-radius: 5px;
 
 			box-shadow: 2px 2px 2px #80808096;
+			border: none;
 		}
 	}
 
