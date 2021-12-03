@@ -5,7 +5,10 @@
 	"main": "index.js",
 	"scripts": {
 		"parcel": "parcel src/index.html",
+<<<<<<< HEAD
 		"checkout": "parcel src/html/checkout.html",
+=======
+>>>>>>> c191e6172aa2d9201a1e3b3c99ded4394ad333de
 		"cart": "parcel src/html/cart.html",
 		"cypress": "cypress open"
 	},
