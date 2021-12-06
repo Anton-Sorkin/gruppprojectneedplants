@@ -1,3 +1,9 @@
 window.onload = function () {
-	/*Write normal typescript*/
+  /*Write normal typescript*/
+  document.getElementById("home-cart-button").addEventListener("click", () => {
+    cartIconLinkClick();
+  });
 };
+function cartIconLinkClick() {
+  window.location.replace("cart.html");
+}

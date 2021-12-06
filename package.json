@@ -8,8 +8,9 @@
 
       "cypress": "cypress open",
       "parcel-product": "parcel src/html/product.html",
-
+      "parcel-home": "parcel src/html/home.html",
       "cart": "parcel src/html/cart.html"
+
 
 
   },
