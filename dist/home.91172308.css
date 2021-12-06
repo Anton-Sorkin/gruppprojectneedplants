@@ -10,9 +10,6 @@ body {
   font-size: 14pt;
   /*all styling here*/
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 body #home-wrapper #home-header {
   position: relative;
   width: 100vw;
@@ -133,7 +130,4 @@ body #home-wrapper #home-main-wrapper a .home-scroll-up-button {
   justify-content: center;
   align-items: center;
 }
->>>>>>> feature/create-home-html
-=======
->>>>>>> cb104b9c18907912c7268d543874abea238c67ab
 /*# sourceMappingURL=home.91172308.css.map */
