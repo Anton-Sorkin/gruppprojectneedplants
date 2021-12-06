@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"mappings":"AAAA,MAAM,CAAC,MAAM,GAAG,QAAQ,GAAI,CAAC;AAC5B,EAA2B,AAA3B,uBAA2B,AAA3B,EAA2B,CAC5B,CAAC","sources":["src/typescript/cart.ts"],"sourcesContent":["window.onload = function () {\r\n\t/*Write normal typescript*/\r\n};\r\n"],"names":[],"version":3,"file":"cart.463f777c.js.map","sourceRoot":"/__parcel_source_root/"}
+=======
+{"mappings":"AAAA,MAAM,CAAC,MAAM,GAAG,QAAQ,GAAI,CAAC;AAC5B,EAA2B,AAA3B,uBAA2B,AAA3B,EAA2B,CAC5B,CAAC","sources":["src/typescript/cart.ts"],"sourcesContent":["window.onload = function () {\n\t/*Write normal typescript*/\n};\n"],"names":[],"version":3,"file":"cart.463f777c.js.map","sourceRoot":"/__parcel_source_root/"}
+>>>>>>> feature/product/image
