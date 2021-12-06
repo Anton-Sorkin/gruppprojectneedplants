@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"mappings":"AAGA;AACA;AACA;EACC;EACA;EACA;;;AAGD;EACC;AACA","sources":["src/scss/components/cart.scss"],"sourcesContent":["@import \"./mixins\";\r\n@import \"extends\";\r\n@import \"variables\";\r\n/*how to use mixins@include tablet {}*/\r\n/*how to use extends@extend .class-name;*/\r\n* {\r\n\tmargin: 0px;\r\n\tpadding: 0px;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\nbody {\r\n\tfont-size: 14pt;\r\n\t/*all styling here*/\r\n}\r\n"],"names":[],"version":3,"file":"cart.25553622.css.map","sourceRoot":"/__parcel_source_root/"}
+=======
+{"mappings":"AAGA;AACA;AACA;EACC;EACA;EACA;;;AAGD;EACC;AACA","sources":["src/scss/components/cart.scss"],"sourcesContent":["@import \"./mixins\";\n@import \"extends\";\n@import \"variables\";\n/*how to use mixins@include tablet {}*/\n/*how to use extends@extend .class-name;*/\n* {\n\tmargin: 0px;\n\tpadding: 0px;\n\tbox-sizing: border-box;\n}\n\nbody {\n\tfont-size: 14pt;\n\t/*all styling here*/\n}\n"],"names":[],"version":3,"file":"cart.25553622.css.map","sourceRoot":"/__parcel_source_root/"}
+>>>>>>> feature/product/image

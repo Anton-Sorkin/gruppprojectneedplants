@@ -5,10 +5,15 @@
   padding: 0px;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> feature/create-home-html
 body {
   font-size: 14pt;
   /*all styling here*/
 }
+<<<<<<< HEAD
 body .start-wrapper {
   background-image: url("alex-furgiuele-UkH7L-aag8A-unsplash.80c3ab6c.jpg");
   width: 100vw;
@@ -68,4 +73,6 @@ body .start-wrapper .start-section .start-item .start-block {
   height: 5px;
   background-color: #1b1b1b;
 }
+=======
+>>>>>>> feature/create-home-html
 /*# sourceMappingURL=index.603968dc.css.map */
