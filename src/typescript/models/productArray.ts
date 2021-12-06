@@ -112,3 +112,22 @@ let plainWhiteCeramicPot: Product = new Product(
   15,
   0
 );
+
+let productsArray: Product[] = [
+  eucalyptus,
+  peaceLily,
+  monstera,
+  porcelainFlower,
+  peony,
+  lily,
+  tulip,
+  hortensia,
+  mixedCacti,
+  miniatureCactus,
+  aloe,
+  fingerCactus,
+  turquoisePartyPot,
+  ruggedCeramicPot,
+  whitePlasticPot,
+  plainWhiteCeramicPot,
+];
