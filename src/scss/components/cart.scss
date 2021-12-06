@@ -12,4 +12,20 @@
 body {
 	font-size: 14pt;
 	/*all styling here*/
+
+	.cart-wrapper {
+		width: 100vw;
+		height: 100vh;
+		background-color: rgb(26, 126, 92);
+		.cart-header{
+			background-color: rgb(0, 255, 55);
+			width: 100vw;
+			height: 100px;
+			.home-button{
+				width: 50px;
+				height: 50px;
+			}
+			.cart-main-title{}
+		}
+	}
 }
