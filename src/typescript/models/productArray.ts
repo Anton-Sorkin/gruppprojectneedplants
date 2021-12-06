@@ -113,7 +113,7 @@ let plainWhiteCeramicPot: Product = new Product(
   0
 );
 
-let productsArray: Product[] = [
+export let productArray: Product[] = [
   eucalyptus,
   peaceLily,
   monstera,
