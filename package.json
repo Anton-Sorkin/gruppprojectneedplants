@@ -5,8 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"parcel": "parcel src/index.html",
-		"cart": "parcel src/html/cart.html",
-		"cypress": "cypress open"
+		"cypress": "cypress open",
+		"parcel-product": "parcel src/html/product.html"
 	},
 	"keywords": [],
 	"author": "",
