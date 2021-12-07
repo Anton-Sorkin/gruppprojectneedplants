@@ -48,7 +48,7 @@ function createHomeHtml() {
 function goToProductPage(i: number) {
   let productToProductPage = JSON.stringify(productArray[i]);
   sessionStorage.setItem("productToProductPage", productToProductPage);
-  window.location.replace("product.html");
+  window.location.href = "product.html";
 }
 
 function addProductToCart() {}

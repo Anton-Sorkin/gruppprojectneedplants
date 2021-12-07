@@ -1,5 +1,5 @@
 import { Product } from "./Product";
-import image from "../../assets/*.jpg";
+import { img } from "../../assets.*.jpg";
 
 let eucalyptus: Product = new Product(
   "Eucalyptus",
