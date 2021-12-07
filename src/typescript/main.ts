@@ -1,3 +1,3 @@
 window.onload = function () {
-	/*Write normal typescript*/
+  /*Write normal typescript*/
 };

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 20974
 118C:\Users\anton\OneDrive\Skrivbord\gruppprojectneedplants\node_modules\source-map-support\browser-source-map-support.js121436361000000000 0
 77C:\Users\anton\OneDrive\Skrivbord\gruppprojectneedplants\node_modules\is-html132828243635276259 1
@@ -20978,3 +20979,7 @@
 47506249
 1638519812976860000
 >>>>>>> c191e6172aa2d9201a1e3b3c99ded4394ad333de
+=======
+18158642641038079889
+1638353130838668000
+>>>>>>> feature/create-home-html
