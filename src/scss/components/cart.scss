@@ -16,13 +16,11 @@ body {
 	.cart-wrapper {
 		width: 100vw;
 		height: 100vh;
-
 		.cart-header {
 			width: 100vw;
 			height: 20vh;
 			display: flex;
 			gap: 40%;
-
 			justify-content: center;
 			align-items: center;
 			.home-button {
@@ -31,20 +29,34 @@ body {
 				background: #ffe040;
 				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 				border-radius: 5px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 
 			.cart-main-title {
+				display: flex;
 				width: 100px;
 				min-width: 50px;
 				height: 50px;
-				background: #ffe040;
 				border-radius: 5px;
+				font-size: 2rem;
+				font-weight: bold;
+				position: relative;
+				right: 40px;
+				padding: 7px;
+				#cart-block {
+					background-color: #ffe040;
+					width: 90px;
+					height: 40px;
+					border-radius: 5px;
+					margin-left: 5px;
+				}
 			}
 		}
 
 		.cart-section {
 			background: #ffffff;
-			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 
 			height: 60vh;
 			width: 100vw;
@@ -66,6 +78,8 @@ body {
 					position: absolute;
 					top: 15px;
 					left: 10px;
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+					border-radius: 15px;
 				}
 				.cart-title {
 					height: 20px;
@@ -76,7 +90,7 @@ body {
 				.cart-price {
 					height: 20px;
 					position: absolute;
-					top: 90px;
+					top: 80px;
 					left: 120px;
 				}
 				.cart-remove {
@@ -89,21 +103,18 @@ body {
 					border-radius: 15px;
 				}
 				.cart-minus {
-					background-color: rgb(141, 135, 222);
 					height: 20px;
 					position: absolute;
 					top: 10px;
 					left: 240px;
 				}
 				.cart-amount {
-					background-color: rgb(222, 135, 186);
 					height: 20px;
 					position: absolute;
 					top: 10px;
 					left: 255px;
 				}
 				.cart-plus {
-					background-color: rgb(135, 222, 161);
 					height: 20px;
 					position: absolute;
 					top: 10px;
@@ -114,16 +125,53 @@ body {
 		.cart-footer {
 			height: 20vh;
 			width: 100vw;
-			background-color: burlywood;
+			display: grid;
+			grid-template-columns: 1fr 0.6fr 1fr;
+			grid-template-rows: 40px 30px;
+			grid-template-areas: "a . b" "c . d" "c . f";
+			padding: 15px;
+
 			.cart-rabattkod {
+				grid-area: a;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 0.8rem;
 			}
 			.cart-total {
+				grid-area: b;
+				display: flex;
+				justify-content: end;
+				align-items: center;
+				font-size: 1.5rem;
 			}
 			.cart-vat {
+				grid-area: d;
+				display: flex;
+				justify-content: end;
+				align-items: center;
+				position: relative;
+				bottom: 12px;
 			}
 			.cart-donate {
+				grid-area: c;
+				background: #ffffff;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+				border-radius: 10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 			.cart-makeorder {
+				grid-area: f;
+				background: #ffe040;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				border-radius: 5px;
+				border: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 30px;
 			}
 		}
 	}
