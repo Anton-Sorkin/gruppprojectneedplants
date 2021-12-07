@@ -460,6 +460,8 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"2RaVp":[function(require,module,exports) {
 var _productArray = require("../typescript/models/productArray");
+var _cartClass = require("./models/CartClass");
+let cartArray = [];
 window.onload = function() {
     document.getElementById("home-cart-button").addEventListener("click", goToCartSite);
     createHomeHtml();
@@ -480,18 +482,18 @@ function createHomeHtml() {
         homeBiBagPlus.classList.add("bi", "bi-bag-plus");
         homeProductName.className = "home-product-name";
         homeProductPrice.className = "home-product-price";
-        homeSingleProductWrapper.addEventListener("click", ()=>{
+        homeImageWrapper.addEventListener("click", ()=>{
             goToProductPage(i);
         });
         homeProductCartLink.addEventListener("click", ()=>{
-            addProductToCart();
+            addProductToCart(i);
         });
         homeProductImage.src = _productArray.productArray[i].image;
         homeProductName.innerHTML = _productArray.productArray[i].name;
         homeProductPrice.innerHTML = _productArray.productArray[i].price.toString() + ":-";
         homeSingleProductWrapper.appendChild(homeImageWrapper);
         homeImageWrapper.appendChild(homeProductImage);
-        homeImageWrapper.appendChild(homeProductCartLink);
+        homeSingleProductWrapper.appendChild(homeProductCartLink);
         homeProductCartLink.appendChild(homeBiBagPlus);
         homeSingleProductWrapper.appendChild(homeProductName);
         homeSingleProductWrapper.appendChild(homeProductPrice);
@@ -501,15 +503,22 @@ function createHomeHtml() {
 function goToProductPage(i) {
     let productToProductPage = JSON.stringify(_productArray.productArray[i]);
     sessionStorage.setItem("productToProductPage", productToProductPage);
-    window.location.replace("product.html");
+    window.location.href = "product.html";
 }
-function addProductToCart() {
+function addProductToCart(i) {
+    let cartArrayItem = new _cartClass.CartProduct(_productArray.productArray[i].name, _productArray.productArray[i].image, _productArray.productArray[i].price, _productArray.productArray[i].amount);
+    cartArray.push(cartArrayItem);
+    sendToCartInLocalStorage();
 }
 function goToCartSite() {
     window.location.href = "cart.html";
 }
+function sendToCartInLocalStorage() {
+    let cartArrayToLocalStorageJson = JSON.stringify(cartArray);
+    window.localStorage.setItem("cartArray", cartArrayToLocalStorageJson);
+}
 
-},{"../typescript/models/productArray":"cShP2"}],"cShP2":[function(require,module,exports) {
+},{"../typescript/models/productArray":"cShP2","./models/CartClass":"eQD2C"}],"cShP2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "productArray", ()=>productArray
@@ -595,6 +604,20 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["kBoZe","2RaVp"], "2RaVp", "parcelRequire8272")
+},{}],"eQD2C":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CartProduct", ()=>CartProduct
+);
+class CartProduct {
+    constructor(name, image, price, amount){
+        this.name = name;
+        this.image = image;
+        this.price = price;
+        this.amount = amount;
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["kBoZe","2RaVp"], "2RaVp", "parcelRequire8272")
 
 //# sourceMappingURL=home.e4a646ca.js.map

@@ -1,4 +1,7 @@
 import { productArray } from "../typescript/models/productArray";
+import { CartProduct } from "./models/CartClass";
+
+let cartArray = [];
 
 window.onload = function () {
   document
@@ -28,11 +31,11 @@ function createHomeHtml() {
     homeProductName.className = "home-product-name";
     homeProductPrice.className = "home-product-price";
 
-    homeSingleProductWrapper.addEventListener("click", () => {
+    homeImageWrapper.addEventListener("click", () => {
       goToProductPage(i);
     });
     homeProductCartLink.addEventListener("click", () => {
-      addProductToCart();
+      addProductToCart(i);
     });
 
     homeProductImage.src = productArray[i].image;
@@ -41,7 +44,7 @@ function createHomeHtml() {
 
     homeSingleProductWrapper.appendChild(homeImageWrapper);
     homeImageWrapper.appendChild(homeProductImage);
-    homeImageWrapper.appendChild(homeProductCartLink);
+    homeSingleProductWrapper.appendChild(homeProductCartLink);
     homeProductCartLink.appendChild(homeBiBagPlus);
     homeSingleProductWrapper.appendChild(homeProductName);
     homeSingleProductWrapper.appendChild(homeProductPrice);
@@ -51,11 +54,24 @@ function createHomeHtml() {
 function goToProductPage(i: number) {
   let productToProductPage = JSON.stringify(productArray[i]);
   sessionStorage.setItem("productToProductPage", productToProductPage);
-  window.location.replace("product.html");
+  window.location.href = "product.html";
 }
 
-function addProductToCart() {}
+function addProductToCart(i: number) {
+  let cartArrayItem: CartProduct = new CartProduct(
+    productArray[i].name,
+    productArray[i].image,
+    productArray[i].price,
+    productArray[i].amount
+  );
+  cartArray.push(cartArrayItem);
+  sendToCartInLocalStorage();
+}
 
 function goToCartSite() {
   window.location.href = "cart.html";
+}
+function sendToCartInLocalStorage() {
+  let cartArrayToLocalStorageJson: string = JSON.stringify(cartArray);
+  window.localStorage.setItem("cartArray", cartArrayToLocalStorageJson);
 }

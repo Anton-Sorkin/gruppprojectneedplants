@@ -1,3 +1,3 @@
-import { CartProduct } from "./CartClass";
+/* import { CartProduct } from "./CartClass";
 
-let cartArray: CartProduct[] = [];
+let cartArray: [] = []; */
