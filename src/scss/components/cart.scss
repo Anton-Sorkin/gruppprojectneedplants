@@ -16,16 +16,115 @@ body {
 	.cart-wrapper {
 		width: 100vw;
 		height: 100vh;
-		background-color: rgb(26, 126, 92);
-		.cart-header{
-			background-color: rgb(0, 255, 55);
+
+		.cart-header {
 			width: 100vw;
-			height: 100px;
-			.home-button{
+			height: 20vh;
+			display: flex;
+			gap: 40%;
+
+			justify-content: center;
+			align-items: center;
+			.home-button {
 				width: 50px;
 				height: 50px;
+				background: #ffe040;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				border-radius: 5px;
 			}
-			.cart-main-title{}
+
+			.cart-main-title {
+				width: 100px;
+				min-width: 50px;
+				height: 50px;
+				background: #ffe040;
+				border-radius: 5px;
+			}
+		}
+
+		.cart-section {
+			background: #ffffff;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+			height: 60vh;
+			width: 100vw;
+			display: flex;
+			flex-direction: column;
+			.cart-item {
+				background: #ffffff;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+				border-radius: 15px;
+				height: 130px;
+				width: 300px;
+				margin: 10px auto;
+				position: relative;
+				.cart-picture {
+					background-image: url(../../assets/Aloe_cropped.jpg);
+					background-size: cover;
+					width: 100px;
+					height: 100px;
+					position: absolute;
+					top: 15px;
+					left: 10px;
+				}
+				.cart-title {
+					height: 20px;
+					position: absolute;
+					top: 30px;
+					left: 120px;
+				}
+				.cart-price {
+					height: 20px;
+					position: absolute;
+					top: 90px;
+					left: 120px;
+				}
+				.cart-remove {
+					height: 20px;
+					position: absolute;
+					top: 95px;
+					left: 275px;
+					background: #ffe040;
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+					border-radius: 15px;
+				}
+				.cart-minus {
+					background-color: rgb(141, 135, 222);
+					height: 20px;
+					position: absolute;
+					top: 10px;
+					left: 240px;
+				}
+				.cart-amount {
+					background-color: rgb(222, 135, 186);
+					height: 20px;
+					position: absolute;
+					top: 10px;
+					left: 255px;
+				}
+				.cart-plus {
+					background-color: rgb(135, 222, 161);
+					height: 20px;
+					position: absolute;
+					top: 10px;
+					left: 280px;
+				}
+			}
+		}
+		.cart-footer {
+			height: 20vh;
+			width: 100vw;
+			background-color: burlywood;
+			.cart-rabattkod {
+			}
+			.cart-total {
+			}
+			.cart-vat {
+			}
+			.cart-donate {
+			}
+			.cart-makeorder {
+			}
 		}
 	}
 }
