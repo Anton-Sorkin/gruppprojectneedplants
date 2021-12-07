@@ -461,6 +461,7 @@ function hmrAcceptRun(bundle, id) {
 },{}],"2RaVp":[function(require,module,exports) {
 var _productArray = require("../typescript/models/productArray");
 window.onload = function() {
+    document.getElementById("home-cart-button").addEventListener("click", goToCartSite);
     createHomeHtml();
 };
 function createHomeHtml() {
@@ -503,6 +504,9 @@ function goToProductPage(i) {
     window.location.replace("product.html");
 }
 function addProductToCart() {
+}
+function goToCartSite() {
+    window.location.href = "cart.html";
 }
 
 },{"../typescript/models/productArray":"cShP2"}],"cShP2":[function(require,module,exports) {

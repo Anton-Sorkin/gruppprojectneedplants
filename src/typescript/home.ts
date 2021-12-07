@@ -1,6 +1,9 @@
 import { productArray } from "../typescript/models/productArray";
 
 window.onload = function () {
+  document
+    .getElementById("home-cart-button")
+    .addEventListener("click", goToCartSite);
   createHomeHtml();
 };
 
@@ -52,3 +55,7 @@ function goToProductPage(i: number) {
 }
 
 function addProductToCart() {}
+
+function goToCartSite() {
+  window.location.href = "cart.html";
+}
