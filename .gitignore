@@ -1,3 +1,7 @@
 node_modules
 .parcel-cache
+<<<<<<< HEAD
 dist
+=======
+dist
+>>>>>>> feature/add-link-to-cart-from-home-cart-icon

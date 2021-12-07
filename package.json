@@ -4,11 +4,23 @@
   "description": "A native Template",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "parcel": "parcel src/index.html",
     "cypress": "cypress open",
     "parcel-product": "parcel src/html/product.html",
     "parcel-home": "parcel src/html/home.html",
     "cart": "parcel src/html/cart.html"
+=======
+      "parcel": "parcel src/index.html",
+
+      "cypress": "cypress open",
+      "parcel-product": "parcel src/html/product.html",
+      "parcel-home": "parcel src/html/home.html",
+      "cart": "parcel src/html/cart.html"
+
+
+
+>>>>>>> feature/add-link-to-cart-from-home-cart-icon
   },
   "keywords": [],
   "author": "",

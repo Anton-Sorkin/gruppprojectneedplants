@@ -1,5 +1,6 @@
 //import { productArray } from "../typescript/models/productArray";
 window.onload = function() {
+<<<<<<< HEAD
     createHomeHtml();
 };
 function createHomeHtml() {
@@ -39,6 +40,14 @@ function createHomeHtml() {
 function goToProduct() {
 }
 function addProductToCart() {
+=======
+    /*Write normal typescript*/ document.getElementById("home-cart-button").addEventListener("click", ()=>{
+        cartIconLinkClick();
+    });
+};
+function cartIconLinkClick() {
+    window.location.replace("cart.html");
+>>>>>>> feature/add-link-to-cart-from-home-cart-icon
 }
 
 //# sourceMappingURL=home.973bedba.js.map
