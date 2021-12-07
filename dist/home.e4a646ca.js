@@ -480,7 +480,7 @@ function createHomeHtml() {
         homeProductName.className = "home-product-name";
         homeProductPrice.className = "home-product-price";
         homeSingleProductWrapper.addEventListener("click", ()=>{
-            goToProduct();
+            goToProductPage(i);
         });
         homeProductCartLink.addEventListener("click", ()=>{
             addProductToCart();
@@ -497,7 +497,10 @@ function createHomeHtml() {
         homeAllProductsWrapper.appendChild(homeSingleProductWrapper);
     }
 }
-function goToProduct() {
+function goToProductPage(i) {
+    let productToProductPage = JSON.stringify(_productArray.productArray[i]);
+    sessionStorage.setItem("productToProductPage", productToProductPage);
+    window.location.replace("product.html");
 }
 function addProductToCart() {
 }
@@ -508,7 +511,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "productArray", ()=>productArray
 );
 var _product = require("./Product");
-let eucalyptus = new _product.Product("Eucalyptus", "", "Upgrade your life with a wondeful twig of eucalyptus. Great for your home office and for your living room.", 10, 0);
+let eucalyptus = new _product.Product("Eucalyptus", "../../assets.Eucalyptus_cropped.jpg", "Upgrade your life with a wondeful twig of eucalyptus. Great for your home office and for your living room.", 10, 0);
 let peaceLily = new _product.Product("Peace Lily", "", "The Pice Lily sybolizes peace, sympathy, prosparety and innocence. This plant will brighten upp your darkest corners.", 10, 0);
 let monstera = new _product.Product("Monstera", "", "The extravagant Monstera is greatly poular and rightfully so, if taken care of correctly it can get up to 10 meters high and the leaves are big as a giants hand", 15, 0);
 let porcelainFlower = new _product.Product("Porcelain Flower", "", "The leaves are thick and the smell of the bold, beautiful flowers will remind you of grandma, in her glory days.", 15, 0);

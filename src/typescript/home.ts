@@ -26,7 +26,7 @@ function createHomeHtml() {
     homeProductPrice.className = "home-product-price";
 
     homeSingleProductWrapper.addEventListener("click", () => {
-      goToProduct();
+      goToProductPage(i);
     });
     homeProductCartLink.addEventListener("click", () => {
       addProductToCart();
@@ -45,6 +45,10 @@ function createHomeHtml() {
     homeAllProductsWrapper.appendChild(homeSingleProductWrapper);
   }
 }
-function goToProduct() {}
+function goToProductPage(i: number) {
+  let productToProductPage = JSON.stringify(productArray[i]);
+  sessionStorage.setItem("productToProductPage", productToProductPage);
+  window.location.replace("product.html");
+}
 
 function addProductToCart() {}
