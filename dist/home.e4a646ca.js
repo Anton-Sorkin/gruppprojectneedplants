@@ -500,7 +500,7 @@ function createHomeHtml() {
 function goToProductPage(i) {
     let productToProductPage = JSON.stringify(_productArray.productArray[i]);
     sessionStorage.setItem("productToProductPage", productToProductPage);
-    window.location.replace("product.html");
+    window.location.href = "product.html";
 }
 function addProductToCart() {
 }

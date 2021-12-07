@@ -83,7 +83,6 @@ body #product-title-wrapper #product-title-div {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  background-color: #fff1e6;
   border-radius: 15px;
   padding: 30px;
 }

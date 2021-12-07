@@ -22,7 +22,7 @@ window.onload = function () {
 
 	let createprice = document.getElementById("product-price-2") as HTMLSpanElement;
 	
-	createprice.innerHTML = storageasobject.price.toString();
+	createprice.innerHTML = "<strong>$:</strong>" + " " + storageasobject.price.toString();
 
 	
     
