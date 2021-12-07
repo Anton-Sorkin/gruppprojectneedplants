@@ -10,9 +10,6 @@ body {
   font-size: 14pt;
   /*all styling here*/
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 body #home-wrapper #home-header {
   position: relative;
   width: 100vw;
@@ -104,7 +101,6 @@ body #home-wrapper #home-main-wrapper #home-all-products-wrapper .home-single-pr
   position: relative;
   width: 100%;
   height: 200px;
-  background-color: red;
   border-radius: 15px;
 }
 body #home-wrapper #home-main-wrapper #home-all-products-wrapper .home-single-product-wrapper .home-image-wrapper .home-product-cart-link {
@@ -118,6 +114,7 @@ body #home-wrapper #home-main-wrapper #home-all-products-wrapper .home-single-pr
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  cursor: pointer;
 }
 body #home-wrapper #home-main-wrapper a {
   position: fixed;
@@ -133,7 +130,4 @@ body #home-wrapper #home-main-wrapper a .home-scroll-up-button {
   justify-content: center;
   align-items: center;
 }
->>>>>>> feature/create-home-html
-=======
->>>>>>> cb104b9c18907912c7268d543874abea238c67ab
 /*# sourceMappingURL=home.91172308.css.map */
