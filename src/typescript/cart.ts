@@ -1,3 +1,6 @@
+import { productArray } from "../typescript/models/productArray";
+
 window.onload = function () {
-	/*Write normal typescript*/
+	createCartHtml();
 };
+function createHomeHtml() {}
