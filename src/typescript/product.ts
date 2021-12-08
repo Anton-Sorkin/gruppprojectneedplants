@@ -24,7 +24,15 @@ window.onload = function () {
 	
 	createprice.innerHTML = "<strong>$:</strong>" + " " + storageasobject.price.toString();
 
+
 	
-    
 }
 
+let homebtn = document.getElementById("product-house-icon") as HTMLDivElement;
+
+	homebtn.addEventListener("click", () =>{window.location.href = ("home.html")});
+
+
+
+let shopbtn = document.getElementById("product-shop-icon") as HTMLDivElement;
+shopbtn.addEventListener("click", () => {window.location.href = ("cart.html")});
