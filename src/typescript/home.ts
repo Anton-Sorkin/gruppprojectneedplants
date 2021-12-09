@@ -112,8 +112,12 @@ function productsInCartArrayCounter() {
     totalItemsInArray += quantity.amount;
   });
   console.log(totalItemsInArray);
-  let cardCount: HTMLDivElement = document.getElementById(
+  let cartCount: HTMLDivElement = document.getElementById(
     "cart-counter"
   ) as HTMLDivElement;
-  cardCount.innerHTML = totalItemsInArray.toString();
+  cartCount.innerHTML = totalItemsInArray.toString();
+
+  if (totalItemsInArray > 0) {
+    cartCount.classList.add("visible");
+  }
 }

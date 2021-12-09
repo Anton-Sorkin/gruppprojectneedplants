@@ -49,7 +49,8 @@ body #home-wrapper #home-header #home-cart-button {
   justify-content: center;
   align-items: center;
 }
-body #home-wrapper #home-header #home-cart-button #cart-counter {
+body #home-wrapper #home-header #home-cart-button .cart-counter {
+  visibility: hidden;
   position: absolute;
   top: 2px;
   right: 2px;
@@ -61,6 +62,9 @@ body #home-wrapper #home-header #home-cart-button #cart-counter {
   justify-content: center;
   align-items: center;
   font-size: 0.6rem;
+}
+body #home-wrapper #home-header #home-cart-button .visible {
+  visibility: visible;
 }
 body #home-wrapper #home-header .home-chategory-wrapper {
   width: 80%;

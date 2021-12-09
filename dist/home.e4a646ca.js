@@ -547,8 +547,9 @@ function productsInCartArrayCounter() {
         totalItemsInArray += quantity.amount;
     });
     console.log(totalItemsInArray);
-    let cardCount = document.getElementById("cart-counter");
-    cardCount.innerHTML = totalItemsInArray.toString();
+    let cartCount = document.getElementById("cart-counter");
+    cartCount.innerHTML = totalItemsInArray.toString();
+    if (totalItemsInArray > 0) cartCount.classList.add("visible");
 }
 
 },{"../typescript/models/productArray":"cShP2","./models/CartClass":"eQD2C"}],"cShP2":[function(require,module,exports) {
