@@ -60,16 +60,18 @@ function goToProductPage(i: number) {
 function addProductToCart(i: number) {
   if (cartArray.length === 0) {
     sendProductFromProductArrayToCartArray(i);
+    sendToCartInLocalStorage();
   } else {
     if (cartArray.some((product) => product.name === productArray[i].name)) {
       let findProduct = cartArray.find(
         (theProduct) => theProduct.name === productArray[i].name
       );
       findProduct.amount++;
-
+      sendToCartInLocalStorage();
       console.log(cartArray);
     } else {
       sendProductFromProductArrayToCartArray(i);
+      sendToCartInLocalStorage();
     }
   }
 }

@@ -506,14 +506,20 @@ function goToProductPage(i) {
     window.location.href = "product.html";
 }
 function addProductToCart(i) {
-    if (cartArray.length === 0) sendProductFromProductArrayToCartArray(i);
-    else if (cartArray.some((product)=>product.name === _productArray.productArray[i].name
+    if (cartArray.length === 0) {
+        sendProductFromProductArrayToCartArray(i);
+        sendToCartInLocalStorage();
+    } else if (cartArray.some((product)=>product.name === _productArray.productArray[i].name
     )) {
         let findProduct = cartArray.find((theProduct)=>theProduct.name === _productArray.productArray[i].name
         );
         findProduct.amount++;
+        sendToCartInLocalStorage();
         console.log(cartArray);
-    } else sendProductFromProductArrayToCartArray(i);
+    } else {
+        sendProductFromProductArrayToCartArray(i);
+        sendToCartInLocalStorage();
+    }
 }
 function sendProductFromProductArrayToCartArray(i) {
     let cartArrayItem = new _cartClass.CartProduct(_productArray.productArray[i].name, _productArray.productArray[i].image, _productArray.productArray[i].price, _productArray.productArray[i].amount);
