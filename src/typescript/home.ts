@@ -58,14 +58,135 @@ function goToProductPage(i: number) {
 }
 
 function addProductToCart(i: number) {
-  let cartArrayItem: CartProduct = new CartProduct(
+  //loopa igenom cartarray
+  //innuti loopen skapa en if
+  //villkoret för min if (productArray[i].name === cartArray[j].name)
+  /* for (let j = 0; j < cartArray.length; j++) {
+    if (productArray[i].name === cartArray[j].name) {
+      cartArray[j].amount++;
+    } else {
+      let cartArrayItem: CartProduct = new CartProduct(
+        productArray[i].name,
+        productArray[i].image,
+        productArray[i].price,
+        productArray[i].amount
+      );
+      cartArray.push(cartArrayItem);
+    }
+  } */
+  if (cartArray.length === 0) {
+    let cartArrayItem: CartProduct = new CartProduct(
+      productArray[i].name,
+      productArray[i].image,
+      productArray[i].price,
+      productArray[i].amount
+    );
+    cartArray.push(cartArrayItem);
+  } else {
+    for (let j = 0; j < cartArray.length; j++) {
+      if (productArray[i].name === cartArray[j].name) {
+        cartArray[j].amount++;
+        //console.log(cartArray[i]);
+      } else {
+        let cartArrayItem: CartProduct = new CartProduct(
+          productArray[i].name,
+          productArray[i].image,
+          productArray[i].price,
+          productArray[i].amount
+        );
+        cartArray.push(cartArrayItem);
+      }
+    }
+  }
+
+  /* if (
+    cartArray.some((doesItExist) => doesItExist.name === productArray[i].name)
+  ) {
+    
+  } */
+
+  /* else {
+    for (let j = 0; j < cartArray.length; j++) {
+      if (productArray[i].name === cartArray[j].name) {
+        if (cartArray[j].amount >= 1) {
+          cartArray[j].amount++;
+        } else {
+          let cartArrayItem: CartProduct = new CartProduct(
+            productArray[i].name,
+            productArray[i].image,
+            productArray[i].price,
+            productArray[i].amount
+          );
+          cartArray[j].amount++;
+          cartArray.push(cartArrayItem);
+        }
+      }
+    }
+  } */
+
+  /* if (cartArray.some((cartItem) => cartItem.name === productArray[i].name)) {
+    if (cartArray[i].amount > 1) {
+      cartArray[i].amount++;
+    }
+  } else {
+    let cartArrayItem: CartProduct = new CartProduct(
+      productArray[i].name,
+      productArray[i].image,
+      productArray[i].price,
+      productArray[i].amount
+    );
+    cartArrayItem.amount++;
+    cartArray.push(cartArrayItem);
+  } */
+  /* if (cartArray.includes(productArray[i].name)) {
+    if (cartArray[i].amount > 0) {
+      cartArray[i].amount++;
+    }
+  } else {
+    let cartArrayItem: CartProduct = new CartProduct(
+      productArray[i].name,
+      productArray[i].image,
+      productArray[i].price,
+      productArray[i].amount
+    );
+    cartArrayItem.amount++;
+    cartArray.push(cartArrayItem);
+  } */
+
+  /* if (!cartArray.includes(productArray[i].name)) {
+    let cartArrayItem: CartProduct = new CartProduct(
+      productArray[i].name,
+      productArray[i].image,
+      productArray[i].price,
+      productArray[i].amount
+    );
+    cartArrayItem.amount++;
+  } else {
+    cartArray[i].amount++;
+  } */
+  /* let cartArrayItem: CartProduct = new CartProduct(
     productArray[i].name,
     productArray[i].image,
     productArray[i].price,
     productArray[i].amount
-  );
-  cartArray.push(cartArrayItem);
-  sendToCartInLocalStorage();
+  ); */
+
+  /* if (cartArray.includes(cartArrayItem[i].name)) {
+      if (cartArrayItem.amount > 0) {
+        cartArrayItem.amount++;
+      }
+    } else {
+      cartArray.push(cartArrayItem);
+      cartArrayItem.amount++;
+    } */
+  /* if (cartArrayItem.amount > 0) {
+      cartArrayItem.amount++;
+    } else {
+      cartArrayItem.amount++;
+      cartArray.push(cartArrayItem);
+      sendToCartInLocalStorage();
+    } */
+  console.log(cartArray);
 }
 
 function goToCartSite() {
