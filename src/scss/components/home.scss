@@ -52,6 +52,19 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        #cart-counter {
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: $yellow;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.6rem;
+        }
       }
       .home-chategory-wrapper {
         width: 80%;

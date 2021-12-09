@@ -49,6 +49,19 @@ body #home-wrapper #home-header #home-cart-button {
   justify-content: center;
   align-items: center;
 }
+body #home-wrapper #home-header #home-cart-button #cart-counter {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffe040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6rem;
+}
 body #home-wrapper #home-header .home-chategory-wrapper {
   width: 80%;
   display: flex;
