@@ -48,7 +48,6 @@ body {
 			.start-item {
 				width: 180px;
 				height: 100px;
-				padding-top: 30px;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
@@ -59,14 +58,22 @@ body {
 				);
 				filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
 				border-radius: 15px 0px 0px 0px;
-				#start-link {
-					width: 60%;
-					height: 60%;
-					border: none;
-					background-color: rgba(255, 224, 64, 1);
-					align-self: center;
-					border-radius: 5px;
-					font-weight: bold;
+				#start-atag {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					#start-link {
+						width: 60%;
+						height: 50%;
+						border: none;
+						text-decoration: none;
+						background-color: rgba(255, 224, 64, 1);
+						align-self: center;
+						border-radius: 5px;
+						font-weight: bold;
+					}
 				}
 				.start-block {
 					width: 180px;
