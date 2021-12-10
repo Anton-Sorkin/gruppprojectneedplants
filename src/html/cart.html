@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart</title>
-    <script src="../typescript/cart.ts"></script>
-    <link rel="stylesheet" href="../scss/components/cart.scss" />
-  </head>
-  <body>
-    <div class="cart-wrapper">
-      <div class="cart-header">
-        <div class="home-button">@</div>
-        <div class="cart-main-title">Your Cart</div>
-      </div>
-      <div class="cart-section">
-        <div class="cart-item">
-          <div class="cart-picture"></div>
-          <div class="cart-title">Lorem Ipsum</div>
-          <div class="cart-price">40$</div>
-          <div class="cart-remove">#</div>
-          <div class="cart-minus">-</div>
-          <div class="cart-amount">00</div>
-          <div class="cart-plus">+</div>
-        </div>
-      </div>
-      <div class="cart-footer">
-        <div class="cart-rabattkod">Rabatt</div>
-        <div class="cart-total">400$</div>
-        <div class="cart-vat">40$</div>
-        <div class="cart-donate"></div>
-        <div class="cart-makeorder">Make Order</div>
-      </div>
-    </div>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cart</title>
+
+		<script src="../typescript/cart.ts" type="module"></script>
+
+		<link rel="stylesheet" href="../scss/components/cart.scss" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+		/>
+	</head>
+	<body>
+		<div class="cart-wrapper">
+			<div class="cart-header">
+				<!-- <a href="./home.html" id="start-atag"> -->
+					<div class="home-button">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							fill="currentColor"
+							class="bi bi-house-door"
+							viewBox="0 0 16 16"
+						>
+							<path
+								d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"
+							/>
+						</svg>
+					</div>
+				</a>
+				<div class="cart-main-title">
+					Your
+					<div id="cart-block">Cart</div>
+				</div>
+			</div>
+			<div class="cart-section"></div>
+			<div class="cart-footer">
+				<div class="cart-rabattkod">Rabattkod?</div>
+				<div class="cart-donate">Donate</div>
+			</div>
+		</div>
+	</body>
 </html>
