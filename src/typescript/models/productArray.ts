@@ -1,9 +1,8 @@
 import { Product } from "./Product";
-import image from "../../assets/*.jpg";
 
 let eucalyptus: Product = new Product(
   "Eucalyptus",
-  "../../assets.Eucalyptus_cropped.jpg",
+  "../assets/Eucalyptus_cropped.jpg",
   "Upgrade your life with a wondeful twig of eucalyptus. Great for your home office and for your living room.",
   10,
   1

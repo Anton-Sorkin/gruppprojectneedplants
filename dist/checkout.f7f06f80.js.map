@@ -1,1 +1,0 @@
-{"mappings":"AAAA,MAAM,CAAC,MAAM,GAAG,QAAQ,GAAI,CAAC;AAC5B,EAA2B,AAA3B,uBAA2B,AAA3B,EAA2B,CAC5B,CAAC","sources":["src/typescript/checkout.ts"],"sourcesContent":["window.onload = function () {\n\t/*Write normal typescript*/\n};\n"],"names":[],"version":3,"file":"checkout.f7f06f80.js.map","sourceRoot":"/__parcel_source_root/"}

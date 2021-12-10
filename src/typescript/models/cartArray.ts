@@ -1,3 +1,4 @@
+/*
 import { CartProduct } from "./CartClass";
 
 export let cartArray: CartProduct[] = [
@@ -5,3 +6,4 @@ export let cartArray: CartProduct[] = [
 
 	{ name: "Euca", image: "../../assets.Eucalyptus_cropped.jpg", price: 15, amount: 1 },
 ];
+*/
