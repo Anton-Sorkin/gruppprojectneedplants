@@ -4,7 +4,7 @@
   "description": "A native Template",
   "main": "index.js",
   "scripts": {
-    "parcel": "parcel src/index.html",
+    "parcel": "parcel src/index.html src/html/*.html src/assets/*.jpg",
     "cypress": "cypress open",
     "parcel-product": "parcel src/html/product.html",
     "parcel-home": "parcel src/html/home.html",
