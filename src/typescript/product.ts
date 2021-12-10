@@ -3,9 +3,9 @@ import { Product } from "./models/Product";
 
 window.onload = function () {
 
-	let theobjectfromstorage: string =  sessionStorage.getItem("productToProductPage");
+	let storageasobject: Product =  JSON.parse(sessionStorage.getItem("productToProductPage")) || new Product("test", "", "desc", 100, 1);
 	
-	let storageasobject: Product = JSON.parse(theobjectfromstorage);
+	// let storageasobject: Product = JSON.parse(theobjectfromstorage);
 
 	console.log(storageasobject);
 
@@ -22,7 +22,7 @@ window.onload = function () {
 
 	let createprice = document.getElementById("product-price-2") as HTMLSpanElement;
 	
-	createprice.innerHTML = "<strong>$:</strong>" + " " + storageasobject.price.toString();
+	createprice.innerHTML = "<strong>ssdads</strong>" + " " + storageasobject.price.toString();
 
 
 	
