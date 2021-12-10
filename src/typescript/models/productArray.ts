@@ -9,7 +9,7 @@ let eucalyptus: Product = new Product(
 );
 let peaceLily: Product = new Product(
   "Peace Lily",
-  "",
+  "../assets/Peace_lily_cropped.jpg",
   "The Pice Lily sybolizes peace, sympathy, prosparety and innocence. This plant will brighten upp your darkest corners.",
   10,
   1
