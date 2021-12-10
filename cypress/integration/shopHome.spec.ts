@@ -13,6 +13,6 @@ describe("Web shop home page tests", () => {
   it("should add products to cart at click", () => {
     cy.visit("http://localhost:1234");
     cy.get("#home-cart-button").click();
-    cy.url().should("should.include", "http://localhost:1234/cart.html");
+    cy.url().should("should.include", "cart.html");
   });
 });
