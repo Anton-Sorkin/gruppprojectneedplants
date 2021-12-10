@@ -4,11 +4,8 @@
   "description": "A native Template",
   "main": "index.js",
   "scripts": {
-    "parcel": "parcel src/index.html",
-    "cypress": "cypress open",
-    "parcel-product": "parcel src/html/product.html",
-    "parcel-home": "parcel src/html/home.html",
-    "cart": "parcel src/html/cart.html"
+    "parcel": "parcel src/index.html src/html/product.html src/html/home.html src/html/cart.html",
+    "cypress": "cypress open"
   },
   "keywords": [],
   "author": "",
