@@ -6,7 +6,7 @@ let storageasobject: Product;
 
 window.onload = function () {
   getFromSessionStorgage();
-
+  getCartFromLocalStorage();
   let createimage = document.getElementById("image") as HTMLImageElement;
   createimage.src = storageasobject.image;
   createimage.alt = " image of product ";
@@ -34,6 +34,11 @@ window.onload = function () {
     "product-minus-button"
   ) as HTMLButtonElement;
   productMinusButton.addEventListener("click", useMinusButton);
+
+  let productButton: HTMLButtonElement = document.getElementById(
+    "product-button"
+  ) as HTMLButtonElement;
+  productButton.addEventListener("click", addToCart);
 };
 
 let homebtn = document.getElementById("product-house-icon") as HTMLDivElement;
@@ -46,14 +51,19 @@ shopbtn.addEventListener("click", () => {
   window.location.href = "cart.html";
 });
 
-/* function getCartFromLocalStorage() {
+function sendToCartInLocalStorage() {
+  let cartArrayToLocalStorageJson: string = JSON.stringify(cartArray);
+  window.localStorage.setItem("cartArray", cartArrayToLocalStorageJson);
+}
+
+function getCartFromLocalStorage() {
   let cartLS: string = window.localStorage.getItem("cartArray");
   if (!cartLS) {
     sendToCartInLocalStorage();
   } else {
     cartArray = JSON.parse(cartLS);
   }
-} */
+}
 
 function getFromSessionStorgage() {
   let sessionST = window.sessionStorage.getItem("productToProductPage");
@@ -85,4 +95,21 @@ function useMinusButton() {
     createprice.innerHTML = " " + storageasobject.amount.toString() + " ";
   }
   sendToSeassionStorage();
+}
+
+function addToCart() {
+  getCartFromLocalStorage();
+  if (cartArray.some((product) => product.name === storageasobject.name)) {
+    let findProduct = cartArray.find(
+      (theProduct) => theProduct.name === storageasobject.name
+    );
+    findProduct.amount += storageasobject.amount;
+    let index = cartArray.indexOf(findProduct);
+    cartArray.splice(index, 1);
+    cartArray.push(storageasobject);
+    sendToCartInLocalStorage();
+  } else {
+    cartArray.push(storageasobject);
+  }
+  console.log(cartArray);
 }
