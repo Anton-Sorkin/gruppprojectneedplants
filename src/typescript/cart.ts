@@ -1,10 +1,11 @@
-import { cartArray } from "../typescript/models/cartArray";
+import { CartProduct } from "./models/CartClass";
 
+let cartArray: CartProduct[] = [];
 window.onload = function () {
+	getCartFromLocalStorage();
 	createCartHtml();
 	calculateTotal();
 	calculateVat();
-	console.log(cartArray);
 };
 function createCartHtml(): void {
 	let cartSectionWrapper: HTMLDivElement = document.querySelector(
@@ -117,4 +118,9 @@ function calculateVat() {
 	cartVat.innerHTML = totalVSum;
 	let cartFooter = document.querySelector(".cart-footer");
 	cartFooter.appendChild(cartVat);
+}
+function getCartFromLocalStorage() {
+	let cArray: string = window.localStorage.getItem("cartArray");
+	cartArray = JSON.parse(cArray);
+	console.log(cartArray);
 }

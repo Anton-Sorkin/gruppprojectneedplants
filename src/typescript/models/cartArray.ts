@@ -1,4 +1,5 @@
-/* import { CartProduct } from "./CartClass";
+/*
+import { CartProduct } from "./CartClass";
 
 export let cartArray: CartProduct[] = [
 	{ name: "Eucalyptus", image: "../../assets.Eucalyptus_cropped.jpg", price: 10, amount: 1 },
