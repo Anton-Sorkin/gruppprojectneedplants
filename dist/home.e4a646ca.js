@@ -462,9 +462,12 @@ function hmrAcceptRun(bundle, id) {
 var _productArray = require("../typescript/models/productArray");
 var _cartClass = require("./models/CartClass");
 let cartArray = [];
+let total;
 window.onload = function() {
     document.getElementById("home-cart-button").addEventListener("click", goToCartSite);
     createHomeHtml();
+    getCartFromLocalStorage();
+    productsInCartArrayCounter();
 };
 function createHomeHtml() {
     let homeAllProductsWrapper = document.getElementById("home-all-products-wrapper");
@@ -515,16 +518,15 @@ function addProductToCart(i) {
         );
         findProduct.amount++;
         sendToCartInLocalStorage();
-        console.log(cartArray);
     } else {
         sendProductFromProductArrayToCartArray(i);
         sendToCartInLocalStorage();
     }
+    productsInCartArrayCounter();
 }
 function sendProductFromProductArrayToCartArray(i) {
     let cartArrayItem = new _cartClass.CartProduct(_productArray.productArray[i].name, _productArray.productArray[i].image, _productArray.productArray[i].price, _productArray.productArray[i].amount);
     cartArray.push(cartArrayItem);
-    console.log(cartArray);
 }
 function goToCartSite() {
     window.location.href = "cart.html";
@@ -532,6 +534,22 @@ function goToCartSite() {
 function sendToCartInLocalStorage() {
     let cartArrayToLocalStorageJson = JSON.stringify(cartArray);
     window.localStorage.setItem("cartArray", cartArrayToLocalStorageJson);
+}
+function getCartFromLocalStorage() {
+    let cartLS = window.localStorage.getItem("cartArray");
+    if (!cartLS) sendToCartInLocalStorage();
+    else cartArray = JSON.parse(cartLS);
+}
+function productsInCartArrayCounter() {
+    getCartFromLocalStorage();
+    let totalItemsInArray = 0;
+    cartArray.forEach((quantity)=>{
+        totalItemsInArray += quantity.amount;
+    });
+    console.log(totalItemsInArray);
+    let cartCount = document.getElementById("cart-counter");
+    cartCount.innerHTML = totalItemsInArray.toString();
+    if (totalItemsInArray > 0) cartCount.classList.add("visible");
 }
 
 },{"../typescript/models/productArray":"cShP2","./models/CartClass":"eQD2C"}],"cShP2":[function(require,module,exports) {

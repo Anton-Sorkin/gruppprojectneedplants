@@ -2,12 +2,14 @@ import { productArray } from "../typescript/models/productArray";
 import { CartProduct } from "./models/CartClass";
 
 let cartArray: CartProduct[] = [];
-
+let total: number;
 window.onload = function () {
   document
     .getElementById("home-cart-button")
     .addEventListener("click", goToCartSite);
   createHomeHtml();
+  getCartFromLocalStorage();
+  productsInCartArrayCounter();
 };
 
 function createHomeHtml() {
@@ -68,12 +70,12 @@ function addProductToCart(i: number) {
       );
       findProduct.amount++;
       sendToCartInLocalStorage();
-      console.log(cartArray);
     } else {
       sendProductFromProductArrayToCartArray(i);
       sendToCartInLocalStorage();
     }
   }
+  productsInCartArrayCounter();
 }
 
 function sendProductFromProductArrayToCartArray(i) {
@@ -84,7 +86,6 @@ function sendProductFromProductArrayToCartArray(i) {
     productArray[i].amount
   );
   cartArray.push(cartArrayItem);
-  console.log(cartArray);
 }
 
 function goToCartSite() {
@@ -93,4 +94,30 @@ function goToCartSite() {
 function sendToCartInLocalStorage() {
   let cartArrayToLocalStorageJson: string = JSON.stringify(cartArray);
   window.localStorage.setItem("cartArray", cartArrayToLocalStorageJson);
+}
+
+function getCartFromLocalStorage() {
+  let cartLS: string = window.localStorage.getItem("cartArray");
+  if (!cartLS) {
+    sendToCartInLocalStorage();
+  } else {
+    cartArray = JSON.parse(cartLS);
+  }
+}
+
+function productsInCartArrayCounter() {
+  getCartFromLocalStorage();
+  let totalItemsInArray: number = 0;
+  cartArray.forEach((quantity) => {
+    totalItemsInArray += quantity.amount;
+  });
+  console.log(totalItemsInArray);
+  let cartCount: HTMLDivElement = document.getElementById(
+    "cart-counter"
+  ) as HTMLDivElement;
+  cartCount.innerHTML = totalItemsInArray.toString();
+
+  if (totalItemsInArray > 0) {
+    cartCount.classList.add("visible");
+  }
 }
