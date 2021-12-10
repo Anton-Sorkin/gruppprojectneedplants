@@ -111,5 +111,5 @@ function addToCart() {
   } else {
     cartArray.push(storageasobject);
   }
-  console.log(cartArray);
+  window.location.href = "cart.html";
 }
