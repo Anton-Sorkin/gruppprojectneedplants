@@ -86,28 +86,28 @@ let fingerCactus: Product = new Product(
 );
 let turquoisePartyPot: Product = new Product(
   "Turquoise Party Pot",
-  "turquoise_pot_cropped.jpg",
+  "../assets/turquoise_pot_cropped.jpg",
   "This turquois flowerpot is the life of a party, a must to any serious collection of flower pots.",
   15,
   1
 );
 let ruggedCeramicPot: Product = new Product(
   "Rugged Ceramic Pot",
-  "",
+  "../assets/rugged_ceramic_pot_cropped.jpg",
   "A rugged ceramic pot, great for flowers and great for soup. Get your groove on and get your plant in one of thies fine things.",
   20,
   1
 );
 let whitePlasticPot: Product = new Product(
   "White Plastic Pot",
-  "",
+  "../assets/white_plastic_pot_cropped.jpg",
   "White, plastic and romantic. Stick your favorite plant in one of these and you’ll never walk alone.",
   20,
   1
 );
 let plainWhiteCeramicPot: Product = new Product(
   "Plain White Ceramic Pot",
-  "",
+  "../assets/plain_white_pot_flipped_cropped.jpg",
   "The Plain White Ceramic Pot is simplicity in its purest form, great for any type of interior design.",
   15,
   1
