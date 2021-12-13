@@ -7,6 +7,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -52,6 +53,23 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        .cart-counter {
+          visibility: hidden;
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: $yellow;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.6rem;
+        }
+        .visible {
+          visibility: visible;
+        }
       }
       .home-chategory-wrapper {
         width: 80%;
