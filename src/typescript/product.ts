@@ -7,6 +7,10 @@ let storageasobject: Product;
 window.onload = function () {
   getFromSessionStorgage();
   getCartFromLocalStorage();
+  checkAmountOnOnload();
+  productsInCartArrayCounter();
+  calculatePrice();
+
   let createimage = document.getElementById("image") as HTMLImageElement;
   createimage.src = storageasobject.image;
   createimage.alt = " image of product ";
@@ -83,6 +87,7 @@ function usePlusButton() {
   storageasobject.amount++;
   createprice.innerHTML = " " + storageasobject.amount.toString() + " ";
   sendToSeassionStorage();
+  calculatePrice();
 }
 
 function useMinusButton() {
@@ -95,6 +100,7 @@ function useMinusButton() {
     createprice.innerHTML = " " + storageasobject.amount.toString() + " ";
   }
   sendToSeassionStorage();
+  calculatePrice();
 }
 
 function addToCart() {
@@ -112,4 +118,43 @@ function addToCart() {
     cartArray.push(storageasobject);
   }
   window.location.href = "cart.html";
+}
+
+function checkAmountOnOnload() {
+  getCartFromLocalStorage();
+  getFromSessionStorgage();
+  if (cartArray.some((amount) => amount.name === storageasobject.name)) {
+    let find = cartArray.find(
+      (theAmount) => theAmount.name === storageasobject.name
+    );
+    storageasobject.amount = find.amount;
+  }
+  sendToSeassionStorage();
+  calculatePrice();
+}
+
+function productsInCartArrayCounter() {
+  getCartFromLocalStorage();
+  let totalItemsInArray: number = 0;
+  cartArray.forEach((quantity) => {
+    totalItemsInArray += quantity.amount;
+  });
+  let cartCount: HTMLDivElement = document.getElementById(
+    "product-cart-counter"
+  ) as HTMLDivElement;
+  cartCount.innerHTML = totalItemsInArray.toString();
+
+  if (totalItemsInArray > 0) {
+    cartCount.classList.add("visible");
+  }
+}
+
+function calculatePrice() {
+  getFromSessionStorgage();
+  let productQuantityPrice: HTMLParagraphElement = document.getElementById(
+    "product-quantity-price"
+  ) as HTMLParagraphElement;
+  let totalPrice = storageasobject.amount * storageasobject.price;
+  productQuantityPrice.innerHTML =
+    "Total Price: " + "$" + totalPrice.toString();
 }
