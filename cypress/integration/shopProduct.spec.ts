@@ -56,7 +56,7 @@ describe("web shop product page tests", () => {
     cy.get("#product-quantity-price").should("have.html", "Total Price: $20");
   });
 
-  it("should be able to click on plus button", () => {
+  it("should be able to click on minus button", () => {
     cy.visit("http://localhost:1234/html/home.html");
     cy.get(
       "#home-all-products-wrapper .home-single-product-wrapper:first .home-image-wrapper"
@@ -103,5 +103,14 @@ describe("web shop product page tests", () => {
     ).click();
     cy.get("#product-button > button").click();
     cy.url().should("include", "/html/cart.html");
+  });
+
+  it("should go to home if you click on home button", () => {
+    cy.visit("http://localhost:1234/html/home.html");
+    cy.get(
+      "#home-all-products-wrapper .home-single-product-wrapper:first .home-image-wrapper"
+    ).click();
+    cy.get("#product-house-icon").click();
+    cy.url().should("include", "/html/home.html");
   });
 });
