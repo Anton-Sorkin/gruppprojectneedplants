@@ -114,6 +114,7 @@ function addToCart() {
     cartArray[index].amount = storageasobject.amount;
   } else {
     cartArray.push(storageasobject);
+    sendToCartInLocalStorage();
   }
   sendToCartInLocalStorage();
   window.location.href = "cart.html";
