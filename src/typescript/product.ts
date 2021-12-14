@@ -111,12 +111,11 @@ function addToCart() {
     );
     findProduct.amount += storageasobject.amount;
     let index = cartArray.indexOf(findProduct);
-    cartArray.splice(index, 1);
-    cartArray.push(storageasobject);
-    sendToCartInLocalStorage();
+    cartArray[index].amount = storageasobject.amount;
   } else {
     cartArray.push(storageasobject);
   }
+  sendToCartInLocalStorage();
   window.location.href = "cart.html";
 }
 
