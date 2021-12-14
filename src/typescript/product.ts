@@ -116,6 +116,7 @@ function addToCart() {
     sendToCartInLocalStorage();
   } else {
     cartArray.push(storageasobject);
+    sendToCartInLocalStorage();
   }
   window.location.href = "cart.html";
 }

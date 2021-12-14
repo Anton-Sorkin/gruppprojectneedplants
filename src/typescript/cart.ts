@@ -6,11 +6,18 @@ window.onload = function () {
   createCartHtml();
   calculateTotal();
   calculateVat();
+  document.getElementById("home-button").addEventListener("click", () => {
+    window.location.href = "home.html";
+  });
+  document
+    .getElementById("cart-makeorder")
+    .addEventListener("click", goToCheckoutPage);
 };
 function createCartHtml(): void {
   let cartSectionWrapper: HTMLDivElement = document.querySelector(
     ".cart-section"
   ) as HTMLDivElement;
+
   getCartFromLocalStorage();
   calculateTotal();
   calculateVat();
@@ -26,7 +33,6 @@ function createCartHtml(): void {
     let cartplus = document.createElement("button");
     let cartRemove = document.createElement("button");
     let cartTotal = document.createElement("h5");
-    let cartOrder = document.createElement("button");
 
     cartItemWrapper.className = "cart-item";
     cartImage.className = "cart-picture";
@@ -37,7 +43,6 @@ function createCartHtml(): void {
     cartplus.className = "cart-plus";
     cartRemove.className = "cart-remove";
     cartTotal.className = "cart-total";
-    cartOrder.className = "cart-makeorder";
 
     cartImage.src = cartArray[i].image;
     cartName.innerHTML = cartArray[i].name;
@@ -46,7 +51,6 @@ function createCartHtml(): void {
     cartAmount.innerHTML = cartArray[i].amount.toString();
     cartplus.innerHTML = "+";
     cartRemove.innerHTML = "x";
-    cartOrder.innerHTML = "Make Order";
 
     cartItemWrapper.appendChild(cartImage);
     cartItemWrapper.appendChild(cartName);
@@ -57,12 +61,6 @@ function createCartHtml(): void {
     cartItemWrapper.appendChild(cartRemove);
 
     cartSectionWrapper.appendChild(cartItemWrapper);
-
-    cartOrder.addEventListener("click", () => {
-      goToCheckoutPage();
-    });
-    let cartFooter = document.querySelector(".cart-footer");
-    cartFooter.appendChild(cartOrder);
 
     cartRemove.addEventListener("click", () => {
       removeThing(i);
@@ -82,16 +80,17 @@ function removeThing(i: number) {
   cartArray.splice(i, 1);
   sendToCartInLocalStorage();
   createCartHtml();
-  console.log(cartArray);
 }
 
 function goToCheckoutPage() {
   let toCheckoutPage = JSON.stringify(cartArray);
-  localStorage.setItem("toCheckoutPage", toCheckoutPage);
+  localStorage.setItem("cartArray", toCheckoutPage);
   window.location.href = "checkout.html";
 }
 
 function calculateTotal() {
+  let cartTotal = document.getElementById("cart-total");
+  cartTotal.innerHTML = "";
   let cartTValues: number[] = [];
   for (let i = 0; i < cartArray.length; i++) {
     const element = cartArray[i].price;
@@ -104,15 +103,12 @@ function calculateTotal() {
     fsum += cartSetValues[i];
   }
   let totalSum = fsum.toString();
-  let cartTotal = document.createElement("h5");
-  cartTotal.className = "cart-total";
-  cartTotal.innerHTML = "";
   cartTotal.innerHTML = totalSum;
-  let cartFooter = document.querySelector(".cart-footer");
-  cartFooter.appendChild(cartTotal);
 }
 
 function calculateVat() {
+  let cartVat = document.getElementById("cart-vat");
+  cartVat.innerHTML = "";
   let cartVValues: number[] = [];
   for (let i = 0; i < cartArray.length; i++) {
     const element = cartArray[i].price;
@@ -125,19 +121,15 @@ function calculateVat() {
   for (let i = 0; i < cartSetVValues.length; i++) {
     vsum += cartSetVValues[i] / 4;
   }
-
   let totalVSum = vsum.toString();
-  let cartVat = document.createElement("h6");
-  cartVat.className = "cart-vat";
   cartVat.innerHTML = totalVSum;
-  let cartFooter = document.querySelector(".cart-footer");
-  cartFooter.appendChild(cartVat);
 }
+
 function getCartFromLocalStorage() {
   let cArray: string = window.localStorage.getItem("cartArray");
   cartArray = JSON.parse(cArray);
-  console.log(cartArray);
 }
+
 function sendToCartInLocalStorage() {
   let cartArrayToLocalStorageJson: string = JSON.stringify(cartArray);
   window.localStorage.setItem("cartArray", cartArrayToLocalStorageJson);
