@@ -11,6 +11,10 @@ function createCartHtml(): void {
   let cartSectionWrapper: HTMLDivElement = document.querySelector(
     ".cart-section"
   ) as HTMLDivElement;
+  getCartFromLocalStorage();
+  calculateTotal();
+  calculateVat();
+  cartSectionWrapper.innerHTML = "";
 
   for (let i = 0; i < cartArray.length; i++) {
     let cartItemWrapper = document.createElement("div");
@@ -63,20 +67,22 @@ function createCartHtml(): void {
     cartRemove.addEventListener("click", () => {
       removeThing(i);
     });
-  }
-  /* function removeThing() {
-		let removeItem = document.querySelector(".cart-remove");
 
-		let todo = removeItem.parentElement;
-		todo.remove();
-		cartArray.splice(0, 1);
-	} */
+    cartMinus.addEventListener("click", () => {
+      useMinusButton(i);
+    });
+
+    cartplus.addEventListener("click", () => {
+      usePlusButton(i);
+    });
+  }
 }
 
 function removeThing(i: number) {
   cartArray.splice(i, 1);
-  console.log(cartArray);
+  sendToCartInLocalStorage();
   createCartHtml();
+  console.log(cartArray);
 }
 
 function goToCheckoutPage() {
@@ -100,6 +106,7 @@ function calculateTotal() {
   let totalSum = fsum.toString();
   let cartTotal = document.createElement("h5");
   cartTotal.className = "cart-total";
+  cartTotal.innerHTML = "";
   cartTotal.innerHTML = totalSum;
   let cartFooter = document.querySelector(".cart-footer");
   cartFooter.appendChild(cartTotal);
@@ -131,5 +138,22 @@ function getCartFromLocalStorage() {
   cartArray = JSON.parse(cArray);
   console.log(cartArray);
 }
+function sendToCartInLocalStorage() {
+  let cartArrayToLocalStorageJson: string = JSON.stringify(cartArray);
+  window.localStorage.setItem("cartArray", cartArrayToLocalStorageJson);
+}
 
-function sendCartToLocalStorage() {}
+function useMinusButton(i: number) {
+  cartArray[i].amount--;
+  if (cartArray[i].amount < 1) {
+    cartArray.splice(i, 1);
+  }
+  sendToCartInLocalStorage();
+  createCartHtml();
+}
+
+function usePlusButton(i: number) {
+  cartArray[i].amount++;
+  sendToCartInLocalStorage();
+  createCartHtml();
+}
