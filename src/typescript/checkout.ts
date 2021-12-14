@@ -179,7 +179,10 @@ function  subtractamount (i:number){
     getfromstorage();
         
     }
+
 }
+
+
 
 
 
