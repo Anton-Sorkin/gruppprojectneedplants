@@ -182,6 +182,10 @@ function  subtractamount (i:number){
 
 }
 
+let homebtn2 = document.getElementById("checkout-home") as HTMLButtonElement;
+homebtn2.addEventListener("click", () => { window.location.href = "home.html"; console.log("hello");} );
+
+
 
 
 
