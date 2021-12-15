@@ -4,174 +4,174 @@
 /*how to use mixins@include tablet {}*/
 /*how to use extends@extend .class-name;*/
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }
 
 body {
-  font-size: 14pt;
-  /*all styling here*/
+	font-size: 14pt;
+	/*all styling here*/
 
-  .cart-wrapper {
-    width: 100vw;
-    height: 100vh;
-    .cart-header {
-      width: 100vw;
-      height: 20vh;
-      display: flex;
-      gap: 40%;
-      justify-content: center;
-      align-items: center;
-      .home-button {
-        width: 50px;
-        height: 50px;
-        background: #ffe040;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+	.cart-wrapper {
+		width: 100vw;
+		height: 100vh;
+		.cart-header {
+			width: 100vw;
+			height: 20vh;
+			display: flex;
+			gap: 40%;
+			justify-content: center;
+			align-items: center;
+			.home-button {
+				width: 50px;
+				height: 50px;
+				background: #ffe040;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				border-radius: 5px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
 
-      .cart-main-title {
-        display: flex;
-        width: 100px;
-        min-width: 50px;
-        height: 50px;
-        border-radius: 5px;
-        font-size: 2rem;
-        font-weight: bold;
-        position: relative;
-        right: 40px;
-        padding: 7px;
-        #cart-block {
-          background-color: #ffe040;
-          width: 90px;
-          height: 40px;
-          border-radius: 5px;
-          margin-left: 5px;
-        }
-      }
-    }
+			.cart-main-title {
+				display: flex;
+				width: 100px;
+				min-width: 50px;
+				height: 50px;
+				border-radius: 5px;
+				font-size: 2rem;
+				font-weight: bold;
+				position: relative;
+				right: 40px;
+				padding: 7px;
+				#cart-block {
+					background-color: #ffe040;
+					width: 90px;
+					height: 40px;
+					border-radius: 5px;
+					margin-left: 5px;
+				}
+			}
+		}
 
-    .cart-section {
-      background: #ffffff;
+		.cart-section {
+			background: #ffffff;
+			height: 60%;
+			width: 100vw;
+			display: flex;
+			flex-wrap: wrap;
+			overflow: scroll;
+			.cart-item {
+				background: #ffffff;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+				border-radius: 15px;
+				height: 130px;
+				width: 300px;
+				margin: 10px auto;
+				position: relative;
+				.cart-picture {
+					background-size: cover;
+					width: 100px;
+					height: 100px;
+					position: absolute;
+					top: 15px;
+					left: 10px;
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+					border-radius: 15px;
+				}
+				.cart-title {
+					height: 20px;
+					position: absolute;
+					top: 30px;
+					left: 120px;
+				}
+				.cart-price {
+					height: 20px;
+					position: absolute;
+					top: 80px;
+					left: 120px;
+				}
+				.cart-remove {
+					height: 20px;
+					position: absolute;
+					top: 95px;
+					left: 275px;
+					background: #ffe040;
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+					border-radius: 15px;
+				}
+				.cart-minus {
+					height: 20px;
+					position: absolute;
+					top: 10px;
+					left: 240px;
+				}
+				.cart-amount {
+					height: 20px;
+					position: absolute;
+					top: 10px;
+					left: 255px;
+				}
+				.cart-plus {
+					height: 20px;
+					position: absolute;
+					top: 10px;
+					left: 280px;
+				}
+			}
+		}
+		.cart-footer {
+			height: 20vh;
+			width: 100vw;
+			display: grid;
+			grid-template-columns: 1fr 0.6fr 1fr;
+			grid-template-rows: 40px 30px;
+			grid-template-areas: "a . b" "c . d" "c . f";
+			padding: 15px;
 
-      height: 60vh;
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      .cart-item {
-        background: #ffffff;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 15px;
-        height: 130px;
-        width: 300px;
-        margin: 10px auto;
-        position: relative;
-        .cart-picture {
-          background-size: cover;
-          width: 100px;
-          height: 100px;
-          position: absolute;
-          top: 15px;
-          left: 10px;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-          border-radius: 15px;
-        }
-        .cart-title {
-          height: 20px;
-          position: absolute;
-          top: 30px;
-          left: 120px;
-        }
-        .cart-price {
-          height: 20px;
-          position: absolute;
-          top: 80px;
-          left: 120px;
-        }
-        .cart-remove {
-          height: 20px;
-          position: absolute;
-          top: 95px;
-          left: 275px;
-          background: #ffe040;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-          border-radius: 15px;
-        }
-        .cart-minus {
-          height: 20px;
-          position: absolute;
-          top: 10px;
-          left: 240px;
-        }
-        .cart-amount {
-          height: 20px;
-          position: absolute;
-          top: 10px;
-          left: 255px;
-        }
-        .cart-plus {
-          height: 20px;
-          position: absolute;
-          top: 10px;
-          left: 280px;
-        }
-      }
-    }
-    .cart-footer {
-      height: 20vh;
-      width: 100vw;
-      display: grid;
-      grid-template-columns: 1fr 0.6fr 1fr;
-      grid-template-rows: 40px 30px;
-      grid-template-areas: "a . b" "c . d" "c . f";
-      padding: 15px;
-
-      .cart-rabattkod {
-        grid-area: a;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.8rem;
-      }
-      .cart-total {
-        grid-area: b;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        font-size: 1.5rem;
-      }
-      .cart-vat {
-        grid-area: d;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        position: relative;
-        bottom: 12px;
-      }
-      .cart-donate {
-        grid-area: c;
-        background: #ffffff;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .cart-makeorder {
-        grid-area: f;
-        background: #ffe040;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
-        border: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 30px;
-      }
-    }
-  }
+			.cart-rabattkod {
+				grid-area: a;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 0.8rem;
+			}
+			.cart-total {
+				grid-area: b;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.5rem;
+			}
+			.cart-vat {
+				grid-area: d;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				bottom: 12px;
+			}
+			.cart-donate {
+				grid-area: c;
+				background: #ffffff;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+				border-radius: 10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			#cart-makeorder {
+				grid-area: f;
+				background: #ffe040;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				border-radius: 5px;
+				border: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 30px;
+			}
+		}
+	}
 }
