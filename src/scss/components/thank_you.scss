@@ -24,11 +24,10 @@ body {
         font-size: 30px;
         line-height: 35px;
         font-family: $font;
-        mark {
-          background-color: #ffe040;
-          background-color: $yellow;
-          border-radius: 5px;
-        }
+      }
+      mark {
+        background-color: $yellow;
+        border-radius: 5px;
       }
     }
   }
@@ -45,61 +44,73 @@ body {
       align-items: center;
       gap: 20px;
       padding-bottom: 30px;
+      text-align: center;
+      @include tablet {
+        width: 70%;
+      }
+      @include laptop {
+        width: 60%;
+      }
       p {
         width: 90%;
       }
     }
-    #thank-you-your-cart-wrapper {
-      width: 90%;
+    #thank-you-main-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 5px;
-      .thank-you-product-wrapper {
+      #thank-you-your-cart-wrapper {
+        width: 90%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        gap: 10px;
-        border: 2px solid black;
-        border-radius: 15px;
-        .thank-you-product-image-container {
-          width: 30%;
-          img {
-            width: 100%;
-            border-radius: 15px;
-          }
-        }
-        .thank-you-text-wrapper {
-          width: 70%;
+        gap: 5px;
+        .thank-you-product-wrapper {
           display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 30px;
-          font-weight: bold;
-          .thank-you-product-name {
-            padding-left: 20px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border: 2px solid black;
+          border-radius: 15px;
+          .thank-you-product-image-container {
+            width: 30%;
+            img {
+              width: 100%;
+              border-radius: 15px;
+            }
           }
-          .thank-you-price-wrapper {
-            padding-left: 20px;
-            padding-right: 40px;
-            width: 100%;
+          .thank-you-text-wrapper {
+            width: 70%;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+            font-weight: bold;
+            .thank-you-product-name {
+              padding-left: 20px;
+            }
+            .thank-you-price-wrapper {
+              padding-left: 20px;
+              padding-right: 40px;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+            }
           }
         }
       }
-    }
-    #thank-you-total-price-wrapper {
-      margin: 10px 0px 20px 0px;
-      width: 90%;
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 40px 10px 10px;
-      border: 2px solid black;
-      border-radius: 15px;
-      font-weight: bold;
-      #thank-you-total-price {
-        //font-weight: bold;
+      #thank-you-total-price-wrapper {
+        margin: 10px 0px 20px 0px;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 40px 10px 10px;
+        border: 2px solid black;
+        border-radius: 15px;
+        font-weight: bold;
+        #thank-you-total-price {
+          //font-weight: bold;
+        }
       }
     }
   }
