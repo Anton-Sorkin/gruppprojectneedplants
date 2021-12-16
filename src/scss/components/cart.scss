@@ -62,6 +62,9 @@ body {
 			display: flex;
 			flex-wrap: wrap;
 			overflow: scroll;
+			@include laptop {
+				gap: 5%;
+			}
 			.cart-item {
 				background: #ffffff;
 				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -70,6 +73,10 @@ body {
 				width: 300px;
 				margin: 10px auto;
 				position: relative;
+				@include laptop {
+					width: 650px;
+					height: 230px;
+				}
 				.cart-picture {
 					background-size: cover;
 					width: 100px;
@@ -79,45 +86,91 @@ body {
 					left: 10px;
 					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 					border-radius: 15px;
+					@include laptop {
+						width: 200px;
+						height: 200px;
+					}
 				}
 				.cart-title {
 					height: 20px;
 					position: absolute;
 					top: 30px;
 					left: 120px;
+
+					@include laptop {
+						top: 50px;
+						left: 250px;
+						font-size: 2rem;
+					}
 				}
 				.cart-price {
 					height: 20px;
 					position: absolute;
 					top: 80px;
 					left: 120px;
+					@include laptop {
+						top: 150px;
+						left: 250px;
+						font-size: 1.5rem;
+					}
 				}
 				.cart-remove {
-					height: 20px;
+					height: 15px;
+					width: 15px;
 					position: absolute;
 					top: 95px;
-					left: 275px;
+					left: 270px;
 					background: #ffe040;
+					border: none;
 					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 					border-radius: 15px;
+					@include laptop {
+						top: 180px;
+						left: 600px;
+						height: 30px;
+						width: 30px;
+					}
 				}
 				.cart-minus {
 					height: 20px;
 					position: absolute;
-					top: 10px;
+					top: 8.5px;
 					left: 240px;
+					border: none;
+					background-color: white;
+					@include laptop {
+						top: 27px;
+						left: 550px;
+						height: 30px;
+						width: 30px;
+						font-size: 1.5rem;
+					}
 				}
 				.cart-amount {
 					height: 20px;
 					position: absolute;
 					top: 10px;
-					left: 255px;
+					left: 258px;
+					@include laptop {
+						top: 30px;
+						left: 580px;
+						height: 30px;
+						width: 30px;
+						font-size: 1.5rem;
+					}
 				}
 				.cart-plus {
 					height: 20px;
 					position: absolute;
 					top: 10px;
 					left: 280px;
+					border: none;
+					background-color: white;
+					@include laptop {
+						top: 30px;
+						left: 600px;
+						font-size: 1.5rem;
+					}
 				}
 			}
 		}
@@ -159,7 +212,9 @@ body {
 				border-radius: 10px;
 				display: flex;
 				justify-content: center;
+				justify-self: center;
 				align-items: center;
+				width: 120px;
 			}
 			#cart-makeorder {
 				grid-area: f;
@@ -168,9 +223,19 @@ body {
 				border-radius: 5px;
 				border: none;
 				display: flex;
+				justify-self: center;
 				justify-content: center;
 				align-items: center;
 				height: 30px;
+				width: 100px;
+				@include tablet {
+					height: 30px;
+					width: 150px;
+				}
+				@include laptop {
+					height: 60px;
+					width: 200px;
+				}
 			}
 		}
 	}
