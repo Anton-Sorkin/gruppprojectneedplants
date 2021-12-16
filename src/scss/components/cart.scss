@@ -61,7 +61,8 @@ body {
 			width: 100vw;
 			display: flex;
 			flex-wrap: wrap;
-			overflow: scroll;
+			overflow-y: scroll;
+
 			@include laptop {
 				gap: 5%;
 			}
@@ -73,6 +74,7 @@ body {
 				width: 300px;
 				margin: 10px auto;
 				position: relative;
+
 				@include laptop {
 					width: 650px;
 					height: 230px;
