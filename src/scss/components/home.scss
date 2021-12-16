@@ -13,14 +13,23 @@
 body {
   font-size: 14pt;
   /*all styling here*/
+  display: flex;
+  justify-content: center;
   #home-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    @include laptop {
+      width: 90%;
+    }
     #home-header {
       position: relative;
       width: 100vw;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 59px;
+      padding-top: 59px;
       gap: 20px;
       .home-heading {
         display: flex;
@@ -53,6 +62,13 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        @include tablet {
+          right: 100px;
+        }
+
+        @include laptop {
+          right: 200px;
+        }
         .cart-counter {
           visibility: hidden;
           position: absolute;
@@ -75,6 +91,12 @@ body {
         width: 80%;
         display: flex;
         justify-content: space-between;
+        @include tablet {
+          width: 60%;
+        }
+        @include laptop {
+          width: 40%;
+        }
         a {
           display: flex;
           flex-direction: column;
@@ -82,6 +104,7 @@ body {
           gap: 5px;
           text-decoration: none;
           color: $black;
+
           .home-cathegory-button {
             width: 60px;
             height: 51px;
@@ -121,12 +144,19 @@ body {
           flex-direction: column;
           width: 47%;
           cursor: pointer;
+          @include tablet {
+            width: 30%;
+          }
+
+          @include laptop {
+            width: 31%;
+          }
           .home-product-cart-link {
             height: 32px;
             width: 28px;
             background-color: $yellow;
             position: absolute;
-            top: 155px;
+            bottom: 100px;
             right: 10px;
             display: flex;
             justify-content: center;
@@ -142,16 +172,24 @@ body {
           }
           .home-image-wrapper {
             width: 100%;
-            height: 200px;
             border-radius: 15px;
-            background-color: red;
+            img {
+              width: 100%;
+              border-radius: 15px;
+            }
           }
         }
-        //styling som borde funka till produkt divvarna
       }
       a {
         position: fixed;
         right: 4px;
+        z-index: 1;
+        @include tablet {
+          right: 50px;
+        }
+        @include laptop {
+          right: 100px;
+        }
         .home-scroll-up-button {
           background-color: $yellow;
           height: 30px;
