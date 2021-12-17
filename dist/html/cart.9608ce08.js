@@ -467,6 +467,7 @@ window.onload = function() {
     createCartHtml();
     calculateTotal();
     calculateVat();
+    disabledMakeOrderButton();
     document.getElementById("home-button").addEventListener("click", ()=>{
         window.location.href = "home.html";
     });
@@ -529,9 +530,13 @@ function removeThing(i) {
     createCartHtml();
 }
 function goToCheckoutPage() {
+    let CartMakeorder = document.getElementById("cart-makeorder");
     let toCheckoutPage = JSON.stringify(cartArray);
     localStorage.setItem("cartArray", toCheckoutPage);
-    window.location.href = "checkout.html";
+    if (cartArray.length < 1) {
+        CartMakeorder.disabled = true;
+        CartMakeorder.classList.add("disabled");
+    } else window.location.href = "checkout.html";
 }
 function calculateTotal() {
     let cartTotal = document.getElementById("cart-total");
@@ -546,7 +551,7 @@ function calculateTotal() {
     let fsum = 0;
     for(let i1 = 0; i1 < cartSetValues.length; i1++)fsum += cartSetValues[i1];
     let totalSum = fsum.toString();
-    cartTotal.innerHTML = totalSum;
+    cartTotal.innerHTML = "$" + totalSum;
 }
 function calculateVat() {
     let cartVat = document.getElementById("cart-vat");
@@ -561,7 +566,7 @@ function calculateVat() {
     let vsum = 0;
     for(let i2 = 0; i2 < cartSetVValues.length; i2++)vsum += cartSetVValues[i2] / 4;
     let totalVSum = vsum.toString();
-    cartVat.innerHTML = totalVSum;
+    cartVat.innerHTML = "$" + totalVSum;
 }
 function getCartFromLocalStorage() {
     let cArray = window.localStorage.getItem("cartArray");
@@ -581,6 +586,13 @@ function usePlusButton(i) {
     cartArray[i].amount++;
     sendToCartInLocalStorage();
     createCartHtml();
+}
+function disabledMakeOrderButton() {
+    let CartMakeorder = document.getElementById("cart-makeorder");
+    if (cartArray.length < 1) {
+        CartMakeorder.disabled = true;
+        CartMakeorder.classList.add("disabled");
+    }
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"ciiiV":[function(require,module,exports) {
