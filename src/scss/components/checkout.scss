@@ -4,54 +4,68 @@
 /*how to use mixins @include tablet {}*/
 /*how to use extends @extend .class-name;*/
 * {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: initial;
 }
 
 body {
-	font-size: 14pt;
-	/*all styling here*/
+  font-size: 14pt;
+  /*all styling here*/
 
-	button#checkout-home {
-		background-color: yellow;
+  button#checkout-home {
+    background-color: $yellow;
 
-		padding: 10px;
+    padding: 10px;
 
-		border-radius: 5px;
-		
-		position: absolute;
-		top: 50px;
-		left: 120px;
-		a{
-			color: black;
+    border-radius: 5px;
 
-		}
-	}
-	.hej{
-		text-align: center;
-	}
-	#totalincenter{
-		text-align: center;
-	}
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    a {
+      color: black;
+    }
+  }
+  th .hej {
+    text-align: center;
 
-	.hej{
-	
-	
-	
-	.minusbtn{
-		background: #F6F6F6;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-		border-radius: 5px;
+	white-space: nowrap;
+    width: 1%;
+  }
+  #totalincenter {
+    text-align: center;
+  }
 
-		padding: 3px 7px;
-	}
-	.plusbtn{
-		background: #F6F6F6;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-		border-radius: 5px;
+  .hej {
+    .minusbtn {
+      background: #f6f6f6;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
 
-		padding: 3px 7px;
-	}
-}
+      padding: 3px 7px;
+      .fas {
+        font-size: 0.9rem;
+      }
+    }
+    .plusbtn {
+      background: #f6f6f6;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+
+      padding: 3px 7px;
+      .fas {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  .place-order {
+    background-color: $yellow;
+    color: black;
+    &:hover {
+      background-color: $yellow;
+      color: black;
+    }
+  }
 }
