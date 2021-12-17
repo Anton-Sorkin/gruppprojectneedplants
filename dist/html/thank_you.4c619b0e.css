@@ -1,0 +1,127 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 14pt;
+  width: 100vw;
+}
+body #thank-you-header {
+  padding: 30px 0px 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #thank-you-header #thank-you-heading h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  font-family: helvetica;
+}
+body #thank-you-header #thank-you-heading mark {
+  background-color: #ffe040;
+  border-radius: 5px;
+}
+body #thank-you-main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #thank-you-main #thank-you-letter {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  body #thank-you-main #thank-you-letter {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  body #thank-you-main #thank-you-letter {
+    width: 60%;
+  }
+}
+body #thank-you-main #thank-you-letter p {
+  width: 90%;
+}
+body #thank-you-main #thank-you-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #thank-you-main #thank-you-main-wrapper #thank-you-your-cart-wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+body #thank-you-main #thank-you-main-wrapper #thank-you-your-cart-wrapper .thank-you-product-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+body #thank-you-main #thank-you-main-wrapper #thank-you-your-cart-wrapper .thank-you-product-wrapper .thank-you-product-image-container {
+  width: 30%;
+}
+body #thank-you-main #thank-you-main-wrapper #thank-you-your-cart-wrapper .thank-you-product-wrapper .thank-you-product-image-container img {
+  width: 100%;
+  border-radius: 15px;
+}
+body #thank-you-main #thank-you-main-wrapper #thank-you-your-cart-wrapper .thank-you-product-wrapper .thank-you-text-wrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  font-weight: bold;
+}
+body #thank-you-main #thank-you-main-wrapper #thank-you-your-cart-wrapper .thank-you-product-wrapper .thank-you-text-wrapper .thank-you-product-name {
+  padding-left: 20px;
+}
+body #thank-you-main #thank-you-main-wrapper #thank-you-your-cart-wrapper .thank-you-product-wrapper .thank-you-text-wrapper .thank-you-price-wrapper {
+  padding-left: 20px;
+  padding-right: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body #thank-you-main #thank-you-main-wrapper #thank-you-total-price-wrapper {
+  margin: 10px 0px 20px 0px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px 10px 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-weight: bold;
+}
+body #thank-you-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+body #thank-you-footer #thank-you-continue-shopping {
+  background-color: #ffe040;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #80808096;
+  border: none;
+}
+/*# sourceMappingURL=thank_you.4c619b0e.css.map */
