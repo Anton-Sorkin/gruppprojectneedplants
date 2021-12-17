@@ -43,7 +43,6 @@ body #home-wrapper #home-header .home-heading h1 {
   font-weight: bold;
   font-size: 30px;
   line-height: 35px;
-  font-family: helvetica;
 }
 body #home-wrapper #home-header .home-heading h1 mark {
   background-color: #ffe040;
@@ -51,7 +50,6 @@ body #home-wrapper #home-header .home-heading h1 mark {
 }
 body #home-wrapper #home-header .home-heading p {
   text-align: center;
-  font-family: helvetica;
 }
 body #home-wrapper #home-header #home-cart-button {
   position: absolute;
@@ -134,7 +132,6 @@ body #home-wrapper #home-main-wrapper h5 {
   font-style: normal;
   font-weight: bold;
   line-height: 35px;
-  font-family: helvetica;
 }
 body #home-wrapper #home-main-wrapper #home-all-products-wrapper {
   width: 80%;
