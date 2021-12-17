@@ -40,7 +40,7 @@ body {
           font-weight: bold;
           font-size: 30px;
           line-height: 35px;
-          font-family: $font;
+
           mark {
             background-color: $yellow;
             border-radius: 5px;
@@ -48,7 +48,6 @@ body {
         }
         p {
           text-align: center;
-          font-family: $font;
         }
       }
       #home-cart-button {
@@ -130,7 +129,6 @@ body {
         font-weight: bold;
 
         line-height: 35px;
-        font-family: $font;
       }
       #home-all-products-wrapper {
         width: 80%;
