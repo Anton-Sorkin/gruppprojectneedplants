@@ -24,8 +24,8 @@ describe("cart page tests", () => {
       "#home-all-products-wrapper .home-single-product-wrapper:last .home-product-cart-link"
     ).click();
     cy.get("#home-cart-button").click();
-    cy.get("#cart-total").should("have.html", "25");
-    cy.get("#cart-vat").should("have.html", "6.25");
+    cy.get("#cart-total").should("have.html", "$25");
+    cy.get("#cart-vat").should("have.html", "$6.25");
   });
   it("should go to checkout when clicked", () => {
     cy.visit("http://localhost:1234/html/home.html");
