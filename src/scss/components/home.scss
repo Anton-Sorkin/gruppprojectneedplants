@@ -4,12 +4,201 @@
 /*how to use mixins@include tablet {}*/
 /*how to use extends@extend .class-name;*/
 * {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-	font-size: 14pt;
-	/*all styling here*/
+  font-size: 14pt;
+  /*all styling here*/
+  display: flex;
+  justify-content: center;
+  #home-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    @include laptop {
+      width: 90%;
+    }
+    #home-header {
+      position: relative;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 59px;
+      gap: 20px;
+      .home-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        h1 {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 30px;
+          line-height: 35px;
+
+          mark {
+            background-color: $yellow;
+            border-radius: 5px;
+          }
+        }
+        p {
+          text-align: center;
+        }
+      }
+      #home-cart-button {
+        position: absolute;
+        //top: 15px;
+        right: 25px;
+        height: 40px;
+        width: 40px;
+
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include tablet {
+          right: 100px;
+        }
+
+        @include laptop {
+          right: 200px;
+        }
+        .cart-counter {
+          visibility: hidden;
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: $yellow;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.6rem;
+        }
+        .visible {
+          visibility: visible;
+        }
+      }
+      .home-chategory-wrapper {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        @include tablet {
+          width: 60%;
+        }
+        @include laptop {
+          width: 40%;
+        }
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+          text-decoration: none;
+          color: $black;
+
+          .home-cathegory-button {
+            width: 60px;
+            height: 51px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    #home-main-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+      h5 {
+        font-style: normal;
+        font-weight: bold;
+
+        line-height: 35px;
+      }
+      #home-all-products-wrapper {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+        .home-single-product-wrapper {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          width: 47%;
+          cursor: pointer;
+          @include tablet {
+            width: 30%;
+          }
+
+          @include laptop {
+            width: 31%;
+          }
+          .home-product-cart-link {
+            height: 32px;
+            width: 28px;
+            background-color: $yellow;
+            position: absolute;
+            bottom: 100px;
+            right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 1;
+            &:hover {
+              height: 34px;
+              width: 30px;
+            }
+          }
+          .home-image-wrapper {
+            width: 100%;
+            border-radius: 15px;
+            img {
+              width: 100%;
+              border-radius: 15px;
+            }
+          }
+        }
+      }
+      a {
+        position: fixed;
+        right: 4px;
+        z-index: 1;
+        @include tablet {
+          right: 50px;
+        }
+        @include laptop {
+          right: 100px;
+        }
+        .home-scroll-up-button {
+          background-color: $yellow;
+          height: 30px;
+          width: 30px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
 }

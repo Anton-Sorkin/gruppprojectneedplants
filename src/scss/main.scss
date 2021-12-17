@@ -4,12 +4,98 @@
 /*how to use mixins@include tablet {}*/
 /*how to use extends@extend .class-name;*/
 * {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
-	font-size: 14pt;
-	/*all styling here*/
+  font-size: 14pt;
+  /*all styling here*/
+
+  .start-wrapper {
+    background-image: url("../assets/alex-furgiuele-UkH7L-aag8A-unsplash.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-color: #f4f4f4;
+    @include laptop {
+      background-image: url("../assets/kara-eads-EbLX7oRo4vI-unsplash\ \(1\).jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .start-header {
+      padding-top: 20px;
+      padding-left: 40px;
+      @include laptop {
+        padding-top: 50px;
+        padding-left: 100px;
+      }
+      h1 {
+        display: inline;
+        font-size: 2.1rem;
+      }
+      #start-yellow {
+        background-color: rgba(255, 224, 64, 1);
+        width: 120px;
+        height: 40px;
+        display: inline;
+        border-radius: 5px;
+      }
+      .start-block {
+        width: 180px;
+        height: 5px;
+        background-color: $black;
+      }
+    }
+    .start-section {
+      position: relative;
+      top: 70vh;
+      width: 100%;
+      height: 100px;
+      display: flex;
+      flex-direction: row-reverse;
+      @include laptop {
+        right: 15%;
+      }
+      .start-item {
+        width: 180px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: linear-gradient(
+          274.49deg,
+          rgba(255, 255, 255, 0.5) -110.02%,
+          rgba(255, 255, 255, 0) 218.91%
+        );
+        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+        border-radius: 15px 0px 0px 0px;
+        #start-atag {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          #start-link {
+            width: 60%;
+            height: 50%;
+            border: none;
+            text-decoration: none;
+            background-color: rgba(255, 224, 64, 1);
+            align-self: center;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+        .start-block {
+          width: 180px;
+          height: 5px;
+          background-color: $black;
+        }
+      }
+    }
+  }
 }
