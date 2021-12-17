@@ -28,16 +28,15 @@ body {
 
 		}
 	}
-	.hej{
+	th .hej{
 		text-align: center;
+		white-space: nowrap !important;
+		width: 1% !important;
 	}
 	#totalincenter{
 		text-align: center;
 	}
 
-	.hej{
-	
-	
 	
 	.minusbtn{
 		background: #F6F6F6;
@@ -53,5 +52,11 @@ body {
 
 		padding: 3px 7px;
 	}
+
 }
+
+#product-quantity{
+	white-space: nowrap !important;
+    width: 1% !important;
+	
 }
