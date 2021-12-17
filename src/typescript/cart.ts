@@ -6,6 +6,7 @@ window.onload = function () {
   createCartHtml();
   calculateTotal();
   calculateVat();
+  disabledMakeOrderButton();
   document.getElementById("home-button").addEventListener("click", () => {
     window.location.href = "home.html";
   });
@@ -83,9 +84,19 @@ function removeThing(i: number) {
 }
 
 function goToCheckoutPage() {
+  let CartMakeorder: HTMLButtonElement = document.getElementById(
+    "cart-makeorder"
+  ) as HTMLButtonElement;
+
   let toCheckoutPage = JSON.stringify(cartArray);
   localStorage.setItem("cartArray", toCheckoutPage);
-  window.location.href = "checkout.html";
+
+  if (cartArray.length < 1) {
+    CartMakeorder.disabled = true;
+    CartMakeorder.classList.add("disabled");
+  } else {
+    window.location.href = "checkout.html";
+  }
 }
 
 function calculateTotal() {
@@ -103,7 +114,7 @@ function calculateTotal() {
     fsum += cartSetValues[i];
   }
   let totalSum = fsum.toString();
-  cartTotal.innerHTML = totalSum;
+  cartTotal.innerHTML = "$" + totalSum;
 }
 
 function calculateVat() {
@@ -122,7 +133,7 @@ function calculateVat() {
     vsum += cartSetVValues[i] / 4;
   }
   let totalVSum = vsum.toString();
-  cartVat.innerHTML = totalVSum;
+  cartVat.innerHTML = "$" + totalVSum;
 }
 
 function getCartFromLocalStorage() {
@@ -148,4 +159,14 @@ function usePlusButton(i: number) {
   cartArray[i].amount++;
   sendToCartInLocalStorage();
   createCartHtml();
+}
+
+function disabledMakeOrderButton() {
+  let CartMakeorder: HTMLButtonElement = document.getElementById(
+    "cart-makeorder"
+  ) as HTMLButtonElement;
+  if (cartArray.length < 1) {
+    CartMakeorder.disabled = true;
+    CartMakeorder.classList.add("disabled");
+  }
 }
